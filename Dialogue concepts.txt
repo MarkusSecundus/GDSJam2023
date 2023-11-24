@@ -1,0 +1,28 @@
+Age question: "Don't you look too young for your age?" (Answer with "Not really. Maybe a bit." or "Oh, you flatter me!"->Needs context for above/below.
+	(Above one, consider if it should be used)
+	"Could you just repeat how old you are again?" (Three random values, including the actual one)
+	
+Name, Surname: Double questions usually.
+	"Do you have any other document to prove this is you? No? Then tell me what your name is."
+	.....
+	"Now your surname."
+
+Name question only:
+	"No way, that's my name too!"
+	answer with "No way, are you XYZ too?"->Add three answers, always mention the name, just once using the correct one.
+
+Town of origin/residence:
+	"You know, I've actually been to XYZ. What do you think of the city."
+	->Not origin/residence: "I've only been there for a visit."
+	->Origin xor residence: "I've only lived there for a short time.
+	->Origin AND residence: "I've lived there for a while. Was born there too."
+	
+Marital status:
+	"Are you coming here alone?"
+	->"Yes, I don't have anybody to come here with."
+	->"Yes, my wife's not with me."
+	
+	"So what brings you to our city?"
+	->Lone travels.
+	->Visit with my wife.
+	->Mourning my wife (Widower)
