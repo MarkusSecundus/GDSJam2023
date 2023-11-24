@@ -2,10 +2,18 @@ Age question: "Don't you look too young for your age?" (Answer with "Not really.
 	(Above one, consider if it should be used)
 	"Could you just repeat how old you are again?" (Three random values, including the actual one)
 	
+	"So what brings you here?"
+	->Young age: Adventure, seeing the world before starting work.
+	->Older: Business trip
+	
 Name, Surname: Double questions usually.
 	"Do you have any other document to prove this is you? No? Then tell me what your name is."
 	.....
 	"Now your surname."
+
+Surname only: "Say, would you happen to know the ABCs from around here?"
+	"I know nobody with that surname."
+	"No, they must just have the same surname as I do."
 
 Name question only:
 	"No way, that's my name too!"
