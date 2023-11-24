@@ -27,19 +27,22 @@ public class MouseCheck : MonoBehaviour
 
         if (mouseL != null)
         {
-            buttonL.image.color = Color.green;
+            buttonL.image.color = mouseL.CursorColor;
         }
 
         if (mouseR != null)
         {
-            buttonR.image.color = Color.green;
+            buttonR.image.color = mouseR.CursorColor;
         }
 
         foreach (IMouse mouse in IInputProvider.Instance.ActiveMice)
         {
             if ((buttonL.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
-                buttonL.image.color = Color.grey;
+                if (mouseL == null)
+                {
+                    buttonL.image.color = Color.grey;
+                }
 
                 if (mouse.GetButtonDown(MouseKeyCode.RightButton))
                 {
@@ -49,7 +52,10 @@ public class MouseCheck : MonoBehaviour
 
             if ((buttonR.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
-                buttonR.image.color = Color.grey;
+                if (mouseR == null)
+                {
+                    buttonR.image.color = Color.grey;
+                }
 
                 if (mouse.GetButtonDown(MouseKeyCode.LeftButton))
                 {
