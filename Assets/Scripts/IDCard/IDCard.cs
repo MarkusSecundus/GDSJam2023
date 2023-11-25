@@ -18,7 +18,7 @@ public class IDCard : ScriptableObject
         {
             if(instance == null)
             {
-                instance = new();
+                instance = generateNewRandomInstance();
             }
             return instance;
         }
