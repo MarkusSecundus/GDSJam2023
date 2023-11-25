@@ -1,16 +1,21 @@
-Age question: "Don't you look too young for your age?" (Answer with "Not really. Maybe a bit." or "Oh, you flatter me!"->Needs context for above/below.
-	(Above one, consider if it should be used)
+Actually accepted questions:
 	"Could you just repeat how old you are again?" (Three random values, including the actual one)
+ 
+	"Do you have any other document to prove this is you? No? Then tell me what your name is, just so I am sure."
+	"So, what's your surname? I think I know someone with the surname."
+	(Choose from three each)
 	
-	"So what brings you here?"
-	->Young age: Adventure, seeing the world before starting work.
-	->Older: Business trip
-	
-Name, Surname: Double questions usually.
-	"Do you have any other document to prove this is you? No? Then tell me what your name is."
-	.....
-	"Now your surname."
+	Town of origin/residence:
+	"You know, have you ever been to XYZ?"
+	->Not origin/residence: "I don't live there, nor was I born there."
+	->"I was born there."
+	->"I live there now, actually."
+	(Note: requires a slight modification of the actual system, doable IMO.)
 
+NOTE: Ideally I want another 5-6 questions.
+	
+	
+________________________
 Surname only: "Say, would you happen to know the ABCs from around here?"
 	"I know nobody with that surname."
 	"No, they must just have the same surname as I do."
@@ -19,11 +24,7 @@ Name question only:
 	"No way, that's my name too!"
 	answer with "No way, are you XYZ too?"->Add three answers, always mention the name, just once using the correct one.
 
-Town of origin/residence:
-	"You know, I've actually been to XYZ. What do you think of the city."
-	->Not origin/residence: "I've only been there for a visit."
-	->Origin xor residence: "I've only lived there for a short time.
-	->Origin AND residence: "I've lived there for a while. Was born there too."
+
 	
 Marital status:
 	"Are you coming here alone?"
@@ -34,3 +35,10 @@ Marital status:
 	->Lone travels.
 	->Visit with my wife.
 	->Mourning my wife (Widower)
+	
+	
+Age question: "Don't you look too young for your age?" (Answer with "Not really. Maybe a bit." or "Oh, you flatter me!"->Needs context for above/below.
+	(Above one, consider if it should be used)	
+	"So what brings you here?"
+	->Young age: Adventure, seeing the world before starting work.
+	->Older: Business trip
