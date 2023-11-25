@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MarkusSecundus.MultiInput;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
     public void ChangeScene(string nameOfScene)
     {
-
+        SceneManager.LoadScene(nameOfScene);
     }
 
     public void ExitGame()
