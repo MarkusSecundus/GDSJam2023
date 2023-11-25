@@ -159,8 +159,11 @@ namespace MarkusSecundus.PhysicsSwordfight.Utils.Extensions
         {
             var ret = self.Find(name);
             if (ret) return ret;
-            foreach (Transform ch in self) 
-                return ch.FindRecursive(name);
+            foreach (Transform ch in self)
+            {
+                ret = ch.FindRecursive(name);
+                if (ret) return ret;
+            }
             return null;
         }
 
