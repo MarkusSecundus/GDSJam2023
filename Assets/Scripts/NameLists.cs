@@ -41,7 +41,6 @@ public static class NameLists
     }
     private static void initNames()
     {
-
         names = new List<string> { "James", 
             "John", 
             "Robert", 
