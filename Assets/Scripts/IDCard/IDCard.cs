@@ -11,6 +11,19 @@ public enum MaritalStatus
 }
 public class IDCard : ScriptableObject
 {
+    private static IDCard instance = null;
+    public static IDCard Instance 
+    { 
+        get
+        {
+            if(instance == null)
+            {
+                instance = new();
+            }
+            return instance;
+        }
+    }
+
     public string Name = "John";
     public string Surname = "Doe";
     public uint age=21;

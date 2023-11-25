@@ -8,7 +8,7 @@ public class IDgetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IDCard card = new();
+        IDCard card = IDCard.Instance;
 
         TextMeshProUGUI fName = gameObject.transform.Find("FName").GetComponent<TextMeshProUGUI>();
         fName.text = card.Name;
