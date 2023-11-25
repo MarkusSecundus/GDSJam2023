@@ -76,10 +76,7 @@ public class FootControl : MonoBehaviour
             footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.02f;
             //mousePosL = newPosL;
         }
-        else
-        {
-            //MouseCheck.mouseL.ViewportPosition = mousePosL;
-        }
+
         mousePosL = newPosL;
 
         if (MouseCheck.mouseL.IsAnyButtonPressed)
@@ -107,10 +104,7 @@ public class FootControl : MonoBehaviour
             //mousePosR = newPosR;
 
         }
-        else
-        {
-            //MouseCheck.mouseR.ViewportPosition = mousePosR;
-        }
+
         mousePosR = newPosR;
 
         if (MouseCheck.mouseR.IsAnyButtonPressed)
