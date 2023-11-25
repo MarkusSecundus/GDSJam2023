@@ -5,6 +5,7 @@ using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MouseCheck : MonoBehaviour
@@ -20,9 +21,20 @@ public class MouseCheck : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        foreach (IMouse mouse in IInputProvider.Instance.ActiveMice)
+        {
+            mouse.IsActive = true;
+            mouse.ShouldDrawCursor = true;
+        }
     }
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         buttonL.image.color = Color.white;
         buttonR.image.color = Color.white;
 
@@ -38,6 +50,7 @@ public class MouseCheck : MonoBehaviour
 
         foreach (IMouse mouse in IInputProvider.Instance.ActiveMice)
         {
+
             if ((buttonL.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
                 buttonL.image.color = buttonL.image.color.WithAlpha(0.5f);
