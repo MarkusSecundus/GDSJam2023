@@ -1,0 +1,56 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.236340372)
+
+newmtl blinn1SG
+kd 0 0 0
+ka 0 0 0
+ks 0.53 0.53 0.53
+ke 0 0 0
+d 1
+illum 1
+map_kd Window_Texture.jpg
+
+newmtl lambert2SG
+kd 0 0 0
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+map_kd Brick_wall_building_texture.jpg
+
+newmtl lambert3SG
+kd 0 0 0
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+map_kd MetalBronzeWorn001_COL_2K_METALNESS.png
+
+newmtl lambert4SG
+kd 0 0 0
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+map_kd MetalBronzeWorn001_COL_2K_METALNESS.png
+
+newmtl lambert5SG
+kd 0 0 0
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+map_kd The_Apartments.psd
+
+newmtl lambert6SG
+kd 0.5 0.5 0.5
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+
