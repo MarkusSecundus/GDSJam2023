@@ -3,7 +3,57 @@ guid: 38371a7192bf8064a953dfb1c20ac660
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dive_BarMat
+    second: {fileID: 2100000, guid: 54851ed63f119604eb3cbbf23ab8134e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMat
+    second: {fileID: 2100000, guid: fb18125211f0e7545a8fc03aeee92643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_HandleMat
+    second: {fileID: 2100000, guid: 4aa3444c2e2bfa34297be299f558432a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SignsMat
+    second: {fileID: 2100000, guid: 0745a414c8f78fb4d9917f752650942f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Store_FrontsMat
+    second: {fileID: 2100000, guid: 5bb3c5e1aa31daa479282f2e3d0338d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows1Mat
+    second: {fileID: 2100000, guid: 0f12614bf8930114aa7eb6690907da72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows2Mat
+    second: {fileID: 2100000, guid: a582ddb848fc9064e9d7eb33205c2f6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowsMat
+    second: {fileID: 2100000, guid: 823a00d918bab3b429c52c0baa496ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube15Mat
+    second: {fileID: 2100000, guid: 80f40804808121c40b415e45f12f62c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface3Mat
+    second: {fileID: 2100000, guid: f019fb55ac0ccb544b890f8658c8e0a6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
