@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IDCardView.unity
     guid: 9be5609bce2a51a45ad40e8686102d4f
+  - enabled: 1
+    path: Assets/Scenes/WalkLevel.unity
+    guid: 864733005177c2d47b66fb4496abdf7d
   m_configObjects: {}

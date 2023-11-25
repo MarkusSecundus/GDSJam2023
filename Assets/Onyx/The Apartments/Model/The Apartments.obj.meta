@@ -3,7 +3,37 @@ guid: 7ccef72c66bfa904ab8d22232345ed75
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_Sign_HoldersMat
+    second: {fileID: 2100000, guid: cb3ae58914d09c548998301a902c1e5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMat
+    second: {fileID: 2100000, guid: db40ee8a5c7454244a8e5c3165afd838, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube1Mat
+    second: {fileID: 2100000, guid: 21a6e41408217204c90ae537ba7c7007, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube65Mat
+    second: {fileID: 2100000, guid: ae98ae6564d67f94d8f5d7e25b3d17fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube67Mat
+    second: {fileID: 2100000, guid: b4384771b3ae546439bcddddb56a99f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube70Mat
+    second: {fileID: 2100000, guid: 0e92493849371a547b123cefdcdd0cf1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
