@@ -16,7 +16,7 @@ public class CopySameNameTransform : MonoBehaviour
     private CopySameNameTransform[] _children => _children_impl ??= this.transform.GetComponentsInShallowChildren<CopySameNameTransform>().ToArray();
     void Start()
     {
-        _toCopy = NamespaceRoot.Find(this.name);
+        _toCopy = NamespaceRoot.FindRecursive(this.name);
         if (!_toCopy)
             Destroy(this);
 
