@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using MarkusSecundus.MultiInput;
 using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
 using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -54,7 +53,7 @@ public class MouseCheck : MonoBehaviour
 
             if ((buttonL.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
-                buttonL.image.color = buttonL.image.color.WithAlpha(0.5f);
+                buttonL.image.color = buttonL.image.color.With(a: 0.5f);
 
                 if (mouse.GetButtonDown(MouseKeyCode.RightButton))
                 {
@@ -64,7 +63,7 @@ public class MouseCheck : MonoBehaviour
 
             if ((buttonR.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
-                buttonR.image.color = buttonR.image.color.WithAlpha(0.5f);
+                buttonR.image.color = buttonR.image.color.With(a: 0.5f);
 
                 if (mouse.GetButtonDown(MouseKeyCode.LeftButton))
                 {
