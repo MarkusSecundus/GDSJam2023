@@ -10,7 +10,7 @@ public class TextAssigner : MonoBehaviour
     public TextMeshProUGUI choice0;
     public TextMeshProUGUI choice1;
     public TextMeshProUGUI choice2;
-    public QuestionLoader questionLoader;
+    public QuestionLoader questionLoader=new QuestionLoader();
     List<int> correctChoices;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,10 @@ public class TextAssigner : MonoBehaviour
         choice0.text = responses[0];
         choice1.text = responses[1];
         choice2.text = responses[2];
+    }
+    public void resetQLoader()
+    {
+        questionLoader.resetUsedQs();
     }
     public void button0Press() { processButtonPress(0); }
     public void button1Press() { processButtonPress(1); }
