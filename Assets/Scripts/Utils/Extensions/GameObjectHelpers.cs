@@ -155,6 +155,14 @@ namespace MarkusSecundus.PhysicsSwordfight.Utils.Extensions
                 if (ret.IsNotNil()) yield return ret;
             }
         }
+        public static Transform FindRecursive(this Transform self, string name)
+        {
+            var ret = self.Find(name);
+            if (ret) return ret;
+            foreach (Transform ch in self) 
+                return ch.FindRecursive(name);
+            return null;
+        }
 
         /// <summary>
         /// Check if provided value is <c>null</c> - if it is, replace it with default value
