@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944e4e55c5b57474898607d90f78aad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeScale: 0.23
+  timeScale: 1
 --- !u!4 &806858141
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +577,753 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &950212809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 950212812}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.32718658
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -1.0908762
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.15305692
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_XDrive.positionSpring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_YDrive.positionSpring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ZDrive.positionSpring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211060019903039494, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211060019903039494, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211060019903039494, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806907755274275547, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Name
+      value: guy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404093981053087119, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404093981053087119, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404093981053087119, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -89.531044
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 167.99278
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665367411859412309, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731799378087958417, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731799378087958417, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731799378087958417, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 950212811}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.1895568
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.057706118
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.06545748
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131191883534957302, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281822284597320864, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 950212810}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 1.1895568
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.057707906
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.065455586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_XMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_YMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000004835427
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.1927536
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.0000021010637
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_RotationDriveMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406639650108980597, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_XMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_YMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 950212813}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.32718638
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -1.0908761
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.153057
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionDamper
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_SlerpDrive.positionSpring
+      value: 50000
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7274195334819484279, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2011905866}
+    - targetCorrespondingSourceObject: {fileID: 7274195334819484279, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2011905865}
+  m_SourcePrefab: {fileID: 100100000, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
+--- !u!54 &950212810 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3503614561632192439, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &950212811 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3525140690514363361, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &950212812 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1290427055227199835, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &950212813 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4750018601006387404, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &950212815 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3141598572485760970, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &969593409 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2940044866981446212, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1631542476
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +1457,216 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 33.811, y: -19.414, z: -32.348}
+--- !u!1 &2011905863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7274195334819484279, guid: a3aebad05c1c5e34081047fc27604340,
+    type: 3}
+  m_PrefabInstance: {fileID: 950212809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!153 &2011905865
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011905863}
+  m_ConnectedBody: {fileID: 969593409}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 0
+  m_YMotion: 0
+  m_ZMotion: 0
+  m_AngularXMotion: 2
+  m_AngularYMotion: 2
+  m_AngularZMotion: 2
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 0
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!153 &2011905866
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011905863}
+  m_ConnectedBody: {fileID: 950212815}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 0
+  m_YMotion: 0
+  m_ZMotion: 0
+  m_AngularXMotion: 2
+  m_AngularYMotion: 2
+  m_AngularZMotion: 2
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 0
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1001 &345673231417467019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,6 +1799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806907755274275547, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -998,36 +1960,6 @@ PrefabInstance:
       propertyPath: m_SlerpDrive.positionSpring
       value: 10000
       objectReference: {fileID: 0}
-    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.716
-      objectReference: {fileID: 0}
-    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.768
-      objectReference: {fileID: 0}
-    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.196
-      objectReference: {fileID: 0}
     - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_AngularXMotion
@@ -1092,36 +2024,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.716
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.768
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.196
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.83
       objectReference: {fileID: 0}
     - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -1268,10 +2170,7 @@ PrefabInstance:
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7898771362533760396, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
-    - {fileID: 4871753988506141756, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
-    - {fileID: 4870334012626560313, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1287,3 +2186,4 @@ SceneRoots:
   - {fileID: 287740746}
   - {fileID: 1631542481}
   - {fileID: 345673231417467019}
+  - {fileID: 950212809}
