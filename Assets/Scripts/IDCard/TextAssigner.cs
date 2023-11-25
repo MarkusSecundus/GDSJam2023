@@ -14,6 +14,8 @@ public class TextAssigner : MonoBehaviour
     public QuestionLoader questionLoader=new QuestionLoader();
     List<int> correctChoices;
     private string bouncerAnswerOnSucces = null;
+    int questionsDone = 0;
+    IDCard currentIDCard=null;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,20 +33,40 @@ public class TextAssigner : MonoBehaviour
         choice0.text = responses[0];
         choice1.text = responses[1];
         choice2.text = responses[2];
+        currentIDCard = id;
     }
     public void resetQLoader()
     {
         questionLoader.resetUsedQs();
+        questionsDone = 0;
     }
     public void button0Press() { processButtonPress(0); }
     public void button1Press() { processButtonPress(1); }
     public void button2Press() { processButtonPress(2); }
+    public void buttonNextPress()
+    {
+        int maxQuestionsPerBouncer = 2;
+        questionsDone++;
+        if (questionsDone<maxQuestionsPerBouncer)
+        {            
+            loadQuestion(currentIDCard);
+            //Deactivate answer UI, activate the question UI again
+        }
+        else
+        {
+            //load next scene
+            resetQLoader();
+            currentIDCard=null;
+            //load into scene.
+        }
+
+    }
 
     public void processButtonPress(int buttonID) {
         if(correctChoices.Contains(buttonID))
         {
             bouncerAnswer.text = bouncerAnswerOnSucces;
-            //Do what should be done on pressing 'next' button
+            //Activate the answer UI, deactivate the question UI.
         }
         else
         {
