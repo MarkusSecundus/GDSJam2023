@@ -132,5 +132,4 @@ public class NameQClass: IQuestion
             answers[i] = "Is your name " + answers[i] + " as well?";
         }
     }
-
 }
