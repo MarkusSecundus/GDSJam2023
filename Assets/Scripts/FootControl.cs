@@ -55,10 +55,10 @@ public class FootControl : MonoBehaviour
         {
             foreach (var mouse in IInputProvider.Instance.ActiveMice)
             {
-                if (MouseCheck.mouseL == null) MouseCheck.mouseL = mouse;
-                else if (MouseCheck.mouseR == null)
+                if (MouseCheck.mouseR == null) MouseCheck.mouseR = mouse;
+                else if (MouseCheck.mouseL == null)
                 {
-                    MouseCheck.mouseR = mouse;
+                    MouseCheck.mouseL = mouse;
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
                     break;
