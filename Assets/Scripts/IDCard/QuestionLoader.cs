@@ -21,6 +21,7 @@ public class QuestionLoader : ScriptableObject
         //Question types added, yay.
         resetUsedQs();
     }
+
     public void resetUsedQs()
     {
         currentlyNotUsedQuestions.Clear();
@@ -109,7 +110,7 @@ public class AgeQClass : IQuestion
 
 public class NameQClass: IQuestion
 {
-    public string[] names;//TODO init this.
+    public string[] names=NameLists.GetNames();//TODO init this.
     public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
         int selector = Random.Range(0, 2);
@@ -168,7 +169,7 @@ public class NameQClass: IQuestion
 
 public class SurnameQClass:IQuestion
 {
-    public string[] surnames;
+    public string[] surnames=NameLists.GetSurnames();
 
     public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
@@ -256,7 +257,7 @@ public class SurnameQClass:IQuestion
 
 public class TownQClass : IQuestion
 {
-    public string[] towns;
+    public string[] towns=NameLists.GetCities();
     public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
         int selector = Random.Range(0, 3);
