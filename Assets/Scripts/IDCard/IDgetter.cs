@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class IDgetter : MonoBehaviour
 {
+    [SerializeField] string nextLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,6 @@ public class IDgetter : MonoBehaviour
     IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("WalkLevel");
+        SceneManager.LoadScene(nextLevel);
     }
 }
