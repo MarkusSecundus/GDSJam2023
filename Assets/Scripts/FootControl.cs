@@ -13,6 +13,7 @@ public class FootControl : MonoBehaviour
 
     [SerializeField] GameObject footL;
     [SerializeField] GameObject footR;
+    [SerializeField] Transform Camera;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,14 @@ public class FootControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float yangle = Camera.rotation.eulerAngles.y;
+
         Vector2 newPosL = MouseCheck.mouseL.ViewportPosition;
-        
+
         if (footL.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosL - mousePosL;
-            footL.transform.position = footL.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
             //mousePosL = newPosL;
         }
         else
@@ -60,8 +63,9 @@ public class FootControl : MonoBehaviour
         if (footR.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosR - mousePosR;
-            footR.transform.position = footR.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
             //mousePosR = newPosR;
+
         }
         else
         {
