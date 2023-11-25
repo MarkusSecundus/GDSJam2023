@@ -10,8 +10,10 @@ public class TextAssigner : MonoBehaviour
     public TextMeshProUGUI choice0;
     public TextMeshProUGUI choice1;
     public TextMeshProUGUI choice2;
+    public TextMeshProUGUI bouncerAnswer;
     public QuestionLoader questionLoader=new QuestionLoader();
     List<int> correctChoices;
+    private string bouncerAnswerOnSucces = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class TextAssigner : MonoBehaviour
         List<string> responses;
 
         IQuestion question=questionLoader.getNextQuestion();            
-        question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices);
+        question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices, out bouncerAnswerOnSucces);
         bouncerText.text = bouncerTalk;
         choice0.text = responses[0];
         choice1.text = responses[1];
@@ -41,11 +43,13 @@ public class TextAssigner : MonoBehaviour
     public void processButtonPress(int buttonID) {
         if(correctChoices.Contains(buttonID))
         {
-            //Do the succeed action. Store state how?
+            bouncerAnswer.text = bouncerAnswerOnSucces;
+            //Do what should be done on pressing 'next' button
         }
         else
         {
-            //Game over man!
+            bouncerAnswer.text="That doesn't match the ID. Are you lying to me?";
+            //Game over man! Strike/gameover screen on pressing 'next' button.
         }
     }
     // Update is called once per frame
