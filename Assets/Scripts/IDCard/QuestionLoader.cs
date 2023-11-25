@@ -148,11 +148,23 @@ public class SurnameQClass:IQuestion
 
     public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
-        throw new System.NotImplementedException();
+        int selector = Random.Range(0, 3);
+        if (selector == 0)
+        {
+            GetQ1(card, out question, out answers, out correctAnswers);
+        }
+        else if (selector == 1)
+        {
+            GetQ2(card, out question, out answers, out correctAnswers);
+        }
+        else
+        {
+            GetQ3(card, out question, out answers, out correctAnswers);
+        }
     }
     public void GetQ1(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
-        question = "Sir, could you please state your surname?";
+        question = "Sir, could you please restate your surname?";
         answers = new List<string>();
         correctAnswers = new List<int>();
         //Generating numeric answers. For names, do similar.
@@ -168,5 +180,52 @@ public class SurnameQClass:IQuestion
         int correctAnswer = Random.Range(0, 2);
         answers[correctAnswer] = card.Surname;
         correctAnswers.Add(correctAnswer);
+    }
+    public void GetQ2(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "I hope you enjoy your visit Mr. "+card.Surname+".";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        //Generating numeric answers. For names, do similar.
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, surnames.Length);
+            while (answers.Contains(surnames[index]) || surnames[index] == card.Surname)
+            {
+                index = (index + 1) % surnames.Length;
+            }
+            answers.Add(surnames[index]);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            answers[i] = "Thanks. It's Mr. "+answers[i]+" though.";
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = "Thanks.";
+        correctAnswers.Add(correctAnswer);
+    }
+    public void GetQ3(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "Hmmmm. Your surname sounds familiar...";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        //Generating numeric answers. For names, do similar.
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, surnames.Length);
+            while (answers.Contains(surnames[index]) || surnames[index] == card.Surname)
+            {
+                index = (index + 1) % surnames.Length;
+            }
+            answers.Add(surnames[index]);
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = card.Surname;
+        correctAnswers.Add(correctAnswer);
+        for (int i = 0; i < 3; i++)
+        {
+            answers[i] = "Do you know another "+answers[i]+"?";
+        }
     }
 }
