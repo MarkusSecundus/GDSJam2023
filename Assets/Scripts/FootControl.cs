@@ -34,6 +34,8 @@ public class FootControl : MonoBehaviour
     {
         IKroot.position = (footL.transform.position + footR.transform.position) / 2;
         IKroot.forward = -Vector3.Cross(footR.transform.position - footL.transform.position, Vector3.up);
+        Transform armature = IKroot.Find("Armature");
+        armature.eulerAngles = IKroot.eulerAngles + new Vector3(-90, 0, 0);
         //IKroot.eulerAngles = footR.transform.eulerAngles + new Vector3(-90, 0, 0);
         //IKroot.up = Vector3.up;
 
@@ -71,7 +73,7 @@ public class FootControl : MonoBehaviour
         if (footL.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosL - mousePosL;
-            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.02f;
             //mousePosL = newPosL;
         }
         else
@@ -101,7 +103,7 @@ public class FootControl : MonoBehaviour
         if (footR.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosR - mousePosR;
-            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.02f;
             //mousePosR = newPosR;
 
         }
