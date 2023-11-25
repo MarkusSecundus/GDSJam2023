@@ -36,7 +36,7 @@ public class IDCard : ScriptableObject
     }
     public static IDCard generateNewRandomInstance()
     {
-        IDCard instance = new();
+        IDCard instance = CreateInstance<IDCard>();
         var names=NameLists.GetNames();
         var surnames=NameLists.GetSurnames();
         var cities=NameLists.GetCities();
