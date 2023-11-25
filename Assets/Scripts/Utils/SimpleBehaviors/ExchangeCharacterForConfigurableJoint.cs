@@ -13,6 +13,8 @@ public class ExchangeCharacterForConfigurableJoint : MonoBehaviour
         {
             var conf = c.AddComponent<ConfigurableJoint>();
             conf.connectedBody = c.connectedBody;
+            conf.axis = c.axis;
+            conf.secondaryAxis = c.swingAxis;
 
             conf.xMotion = ConfigurableJointMotion.Locked;
             conf.yMotion = ConfigurableJointMotion.Locked;
