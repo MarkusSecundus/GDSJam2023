@@ -19,6 +19,7 @@ namespace MarkusSecundus.PhysicsSwordfight.Cosmetics
         {
             if (Target.IsNotNil())
             {
+                //var LerpFactor = Mathf.Pow(this.LerpFactor, Time.deltaTime);
                 (transform.position, transform.rotation, transform.localScale) = (
                     Vector3.Lerp(transform.position, Target.position, LerpFactor), 
                     Quaternion.Lerp(transform.rotation, Target.rotation, LerpFactor), 
