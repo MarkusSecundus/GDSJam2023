@@ -50,6 +50,7 @@ public class MouseCheck : MonoBehaviour
 
         foreach (IMouse mouse in IInputProvider.Instance.ActiveMice)
         {
+            //mouse.ViewportPosition = new Vector2(50, 50);
 
             if ((buttonL.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
