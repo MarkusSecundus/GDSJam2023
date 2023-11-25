@@ -12,16 +12,13 @@ public class CopySameNameTransform : MonoBehaviour
 
     public Transform _toCopy;
 
-    private CopySameNameTransform[] _children;
+    private CopySameNameTransform[] _children_impl;
+    private CopySameNameTransform[] _children => _children_impl ??= this.transform.GetComponentsInShallowChildren<CopySameNameTransform>().ToArray();
     void Start()
     {
         _toCopy = NamespaceRoot.Find(this.name);
         if (!_toCopy)
-        {
-            Debug.Log($"Destroying self: {this.name}", gameObject);
             Destroy(this);
-        }
-        //_children = this.transform.GetComponentsInShallowChildren<CopySameNameTransform>().ToArray();
 
         if (!transform.parent.GetComponent<CopySameNameTransform>())
         {
@@ -37,17 +34,14 @@ public class CopySameNameTransform : MonoBehaviour
         {
             var current = queue.Dequeue();
             current.doCopyParent();
-            foreach (var ch in current.transform.GetComponentsInShallowChildren<CopySameNameTransform>()) if(ch) queue.Enqueue(ch);
+            foreach (var ch in current._children) if(ch) queue.Enqueue(ch);
         }
     }
 
     void doCopyParent()
     {
         if (!_toCopy)
-        {
-            Debug.LogWarning($"Nothing to copy! {this.name}", this);
             return;
-        }
         this.transform.position = _toCopy.transform.position;
         this.transform.rotation = _toCopy.transform.rotation;
     }
