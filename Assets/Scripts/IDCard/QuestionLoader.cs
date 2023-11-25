@@ -109,6 +109,28 @@ public class NameQClass: IQuestion
         answers[correctAnswer] = card.FirstName;
         correctAnswers.Add(correctAnswer);
     }
-
+    public void GetQ2(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "Oh, I think my first name is the same as yours.";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        //Generating numeric answers. For names, do similar.
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, names.Length);
+            while (answers.Contains(names[index]) || names[index] == card.FirstName)
+            {
+                index = (index + 1) % names.Length;
+            }
+            answers.Add(names[index]);
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = card.FirstName;
+        correctAnswers.Add(correctAnswer);
+        for(int i = 0;i < 3; i++)
+        {
+            answers[i] = "Is your name " + answers[i] + " as well?";
+        }
+    }
 
 }
