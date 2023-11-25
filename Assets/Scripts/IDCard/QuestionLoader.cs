@@ -316,17 +316,17 @@ public class TownQClass : IQuestion
         question = "You know, have you ever been to "+ townToUse+"?";
         answers = new List<string>();        
         correctAnswers = new List<int>();
-        answers.Append("I was born there.");
+        answers.Add("I was born there.");
         if(card.TownOfOrigin == townToUse)
         {
             correctAnswers.Add(0);
         }
-        answers.Append("I live there, actually.");
+        answers.Add("I live there, actually.");
         if(card.TownOfResidence == townToUse)
         {
             correctAnswers.Add(1);
         }
-        answers.Append("I may have visited it, but I don't live there nor was I born there.");
+        answers.Add("I may have visited it, but I don't live there nor was I born there.");
         if(correctAnswers.Count == 0)
         {
             bouncerAOnSuccess = "That's a shame, I have family there.";
@@ -404,17 +404,17 @@ public class MarriageQClass : IQuestion
         question = "Condolences about your wife.";
         answers = new List<string>();
         correctAnswers = new List<int>();
-        answers.Append("I don't have a wife.");
+        answers.Add("I don't have a wife.");
         if (card.maritalStatus == MaritalStatus.single || card.maritalStatus==MaritalStatus.divorced)
         {
             correctAnswers.Add(0);
         }
-        answers.Append("I'm still happily married.");
+        answers.Add("I'm still happily married.");
         if (card.maritalStatus == MaritalStatus.married)
         {
             correctAnswers.Add(1);
         }
-        answers.Append("Thank you. It was hard to deal with.");
+        answers.Add("Thank you. It was hard to deal with.");
         if (card.maritalStatus==MaritalStatus.widower)
         {
             correctAnswers.Add(2);
@@ -431,19 +431,19 @@ public class MarriageQClass : IQuestion
         answers = new List<string>();
         correctAnswers = new List<int>();
         bouncerAOnSuccess = "";
-        answers.Append("Nah, still looking for that special someone.");
+        answers.Add("Nah, still looking for that special someone.");
         if (card.maritalStatus == MaritalStatus.single || card.maritalStatus == MaritalStatus.divorced)
         {
             correctAnswers.Add(0);
             bouncerAOnSuccess = "Well, good luck with that then.";
         }
-        answers.Append("I have a great wife. Unlike most of my friends... It's not easy to find the one.");
+        answers.Add("I have a great wife. Unlike most of my friends... It's not easy to find the one.");
         if (card.maritalStatus == MaritalStatus.married)
         {
             correctAnswers.Add(1);
             bouncerAOnSuccess = "Well, you are a lucky man.";
         }
-        answers.Append("Please don't talk... About her. She's gone.");
+        answers.Add("Please don't talk... About her. She's gone.");
         if (card.maritalStatus == MaritalStatus.widower)
         {
             correctAnswers.Add(2);
