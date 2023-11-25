@@ -6,13 +6,36 @@ using UnityEngine;
 
 public class QuestionLoader : ScriptableObject
 {
+    public List<IQuestion> questions;
+    public List<IQuestion> currentlyNotUsedQuestions;
     //public TextAsset dsa;
     // Start is called before the first frame update
     void Start()
     {
-
+        questions = new List<IQuestion>();
+        questions.Add(new AgeQClass());
+        questions.Add(new NameQClass());
+        questions.Add(new SurnameQClass());
+        questions.Add(new TownQClass());
+        questions.Add(new MarriageQClass());
+        //Question types added, yay.
+        resetUsedQs();
     }
-
+    public void resetUsedQs()
+    {
+        currentlyNotUsedQuestions.Clear();
+        foreach (IQuestion question in questions)
+        {
+            currentlyNotUsedQuestions.Add(question);
+        }
+    }
+    public IQuestion getNextQuestion()
+    {
+        int rand=Random.Range(0,currentlyNotUsedQuestions.Count());
+        var returnval = currentlyNotUsedQuestions[rand];
+        currentlyNotUsedQuestions.Remove(returnval);
+        return returnval;
+    }
     // Update is called once per frame
     void Update()
     {
