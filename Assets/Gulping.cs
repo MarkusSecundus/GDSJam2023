@@ -29,6 +29,6 @@ public class Gulping : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         source.Play();
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("WalkLevel");
+        SceneManager.LoadScene("IDCardView");
     }
 }
