@@ -27,7 +27,17 @@ public class FootControl : MonoBehaviour
     {
         Vector2 newPosL = MouseCheck.mouseL.ViewportPosition;
         Vector2 deltaPos = newPosL - mousePosL;
-        footL.transform.position = footL.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+
+        if (footL.transform.position.y > starty)
+        {
+            footL.transform.position = footL.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            mousePosL = newPosL;
+        }
+        else
+        {
+            MouseCheck.mouseL.ViewportPosition = mousePosL;
+        }
+
 
         if (MouseCheck.mouseL.IsAnyButtonPressed)
         {
@@ -42,19 +52,27 @@ public class FootControl : MonoBehaviour
             {
                 footL.transform.position = footL.transform.position - Vector3.up * Time.deltaTime * 3;
             }
-        }
-
-        mousePosL = newPosL;
+        }     
 
         Vector2 newPosR = MouseCheck.mouseR.ViewportPosition;
         deltaPos = newPosR - mousePosR;
-        footR.transform.position = footR.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+
+        if (footR.transform.position.y > starty)
+        {
+            footR.transform.position = footR.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
+            mousePosR = newPosR;
+        }
+        else
+        {
+            MouseCheck.mouseR.ViewportPosition = mousePosR;
+        }
+
 
         if (MouseCheck.mouseR.IsAnyButtonPressed)
         {
             if (footR.transform.position.y < starty + maxHeight)
             {
-                footR.transform.position = footR.transform.position + Vector3.up * Time.deltaTime * 3 ;
+                footR.transform.position = footR.transform.position + Vector3.up * Time.deltaTime * 3;
             }
         }
         else
@@ -64,7 +82,5 @@ public class FootControl : MonoBehaviour
                 footR.transform.position = footR.transform.position - Vector3.up * Time.deltaTime * 3;
             }
         }
-
-        mousePosR = newPosR;
     }
 }
