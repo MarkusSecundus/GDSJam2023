@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +30,18 @@ namespace MarkusSecundus.PhysicsSwordfight.Utils.Extensions
             {
                 yield return toYield;
                 toPerform();
+            }
+        }
+        public static void PerformCyclically(this MonoBehaviour self, System.Action toPerform, object toYieldOnIteration)
+        {
+            self.StartCoroutine(impl());
+            IEnumerator impl()
+            {
+                while (true)
+                {
+                    yield return toYieldOnIteration;
+                    toPerform();
+                }
             }
         }
         /// <summary>
@@ -134,6 +147,14 @@ namespace MarkusSecundus.PhysicsSwordfight.Utils.Extensions
             t.localRotation = Quaternion.identity;
             t.localPosition = Vector3.zero;
         }
+        public static IEnumerable<T> GetComponentsInShallowChildren<T>(this Transform self)
+        {
+            foreach (Transform ch in self.transform)
+            {
+                var ret = ch.GetComponent<T>();
+                if (ret.IsNotNil()) yield return ret;
+            }
+        }
 
         /// <summary>
         /// Check if provided value is <c>null</c> - if it is, replace it with default value
@@ -216,6 +237,7 @@ namespace MarkusSecundus.PhysicsSwordfight.Utils.Extensions
                     Message = parsed.Groups["MessageName"].Value,
                 };
             }
+
         }
     }
 
