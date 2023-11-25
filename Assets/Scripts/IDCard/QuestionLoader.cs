@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -227,5 +228,97 @@ public class SurnameQClass:IQuestion
         {
             answers[i] = "Do you know another "+answers[i]+"?";
         }
+    }
+}
+
+public class TownQClass : IQuestion
+{
+    public string[] towns;
+    public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        int selector = Random.Range(0, 3);
+        if (selector == 0)
+        {
+            GetQ1(card, out question, out answers, out correctAnswers);
+        }
+        else if (selector == 1)
+        {
+            GetQ2(card, out question, out answers, out correctAnswers);
+        }
+        else
+        {
+            GetQ3(card, out question, out answers, out correctAnswers);
+        }
+    }
+    public void GetQ1(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        string townToUse = null;
+        int selector = Random.Range(0, 4);
+        if (selector == 0)
+        {
+            townToUse = card.TownOfOrigin;
+        }
+        else if (selector == 1)
+        {
+            townToUse = card.TownOfResidence;
+        }
+        else
+        {
+            townToUse= towns[Random.Range(0, towns.Length)];
+        }
+        question = "You know, have you ever been to "+ townToUse+"?";
+        answers = new List<string>();        
+        correctAnswers = new List<int>();
+        answers.Append("I was born there.");
+        if(card.TownOfOrigin == townToUse)
+        {
+            correctAnswers.Add(0);
+        }
+        answers.Append("I live there, actually.");
+        if(card.TownOfResidence == townToUse)
+        {
+            correctAnswers.Add(1);
+        }
+        answers.Append("I may have visited it, but I don't live there nor was I born there.");
+        if(correctAnswers.Count == 0)
+        {
+            correctAnswers.Add(2);
+        }
+    }
+    public void GetQ2(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "So, where do you live?";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, towns.Length);
+            while (answers.Contains(towns[index]) || towns[index] == card.TownOfResidence)
+            {
+                index = (index + 1) % towns.Length;
+            }
+            answers.Add(towns[index]);
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = card.TownOfResidence;
+        correctAnswers.Add(correctAnswer);
+    }
+    public void GetQ3(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "So, where were you born? I thing I am from the same city";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, towns.Length);
+            while (answers.Contains(towns[index]) || towns[index] == card.TownOfOrigin)
+            {
+                index = (index + 1) % towns.Length;
+            }
+            answers.Add(towns[index]);
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = card.TownOfOrigin;
+        correctAnswers.Add(correctAnswer);
     }
 }
