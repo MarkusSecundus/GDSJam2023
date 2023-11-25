@@ -30,7 +30,10 @@ public class IDCard : ScriptableObject
     public string TownOfOrigin = "Detroit";
     public string TownOfResidence = "Chicago";
     public MaritalStatus maritalStatus = MaritalStatus.single;
-
+    public static void NullOutID()
+    {
+        instance = null;
+    }
     public static IDCard generateNewRandomInstance()
     {
         IDCard instance = new();
