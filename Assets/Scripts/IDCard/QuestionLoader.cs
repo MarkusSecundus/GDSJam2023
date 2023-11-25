@@ -322,3 +322,61 @@ public class TownQClass : IQuestion
         correctAnswers.Add(correctAnswer);
     }
 }
+
+public class MarriageQClass : IQuestion
+{
+    public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        int selector = Random.Range(0, 2);
+        if (selector == 0)
+        {
+            GetQ1(card, out question, out answers, out correctAnswers);
+        }
+        else
+        {
+            GetQ2(card, out question, out answers, out correctAnswers);
+        }
+    }
+    private void GetQ1(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "Condolences about your wife.";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        answers.Append("I don't have a wife.");
+        if (card.maritalStatus == MaritalStatus.single || card.maritalStatus==MaritalStatus.divorced)
+        {
+            correctAnswers.Add(0);
+        }
+        answers.Append("I'm still happily married.");
+        if (card.maritalStatus == MaritalStatus.married)
+        {
+            correctAnswers.Add(1);
+        }
+        answers.Append("Thank you. It was hard to deal with.");
+        if (card.maritalStatus==MaritalStatus.widower)
+        {
+            correctAnswers.Add(2);
+        }
+    }
+    private void GetQ2(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "Married? I hope I'm as lucky as you one day.";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        answers.Append("Nah, still looking for that special someone.");
+        if (card.maritalStatus == MaritalStatus.single || card.maritalStatus == MaritalStatus.divorced)
+        {
+            correctAnswers.Add(0);
+        }
+        answers.Append("I have a great wife. Unlike most of my friends, it's not easy to find the one.");
+        if (card.maritalStatus == MaritalStatus.married)
+        {
+            correctAnswers.Add(1);
+        }
+        answers.Append("Please don't talk... About her. She's gone.");
+        if (card.maritalStatus == MaritalStatus.widower)
+        {
+            correctAnswers.Add(2);
+        }
+    }
+}
