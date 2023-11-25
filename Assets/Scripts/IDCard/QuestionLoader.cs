@@ -141,3 +141,32 @@ public class NameQClass: IQuestion
         }
     }
 }
+
+public class SurnameQClass:IQuestion
+{
+    public string[] surnames;
+
+    public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        throw new System.NotImplementedException();
+    }
+    public void GetQ1(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
+    {
+        question = "Sir, could you please state your surname?";
+        answers = new List<string>();
+        correctAnswers = new List<int>();
+        //Generating numeric answers. For names, do similar.
+        for (int i = 0; i < 3; i++)
+        {
+            int index = Random.Range(0, surnames.Length);
+            while (answers.Contains(surnames[index]) || surnames[index] == card.Surname)
+            {
+                index = (index + 1) % surnames.Length;
+            }
+            answers.Add(surnames[index]);
+        }
+        int correctAnswer = Random.Range(0, 2);
+        answers[correctAnswer] = card.Surname;
+        correctAnswers.Add(correctAnswer);
+    }
+}
