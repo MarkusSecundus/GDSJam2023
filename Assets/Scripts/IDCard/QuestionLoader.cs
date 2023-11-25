@@ -4,13 +4,12 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-public class QuestionLoader : ScriptableObject
+public class QuestionLoader
 {
-    public List<IQuestion> questions;
-    public List<IQuestion> currentlyNotUsedQuestions;
+    public List<IQuestion> questions=new List<IQuestion>();
+    public List<IQuestion> currentlyNotUsedQuestions=new List<IQuestion>();
     //public TextAsset dsa;
-    // Start is called before the first frame update
-    void Start()
+    public QuestionLoader()
     {
         questions = new List<IQuestion>();
         questions.Add(new AgeQClass());
@@ -37,12 +36,6 @@ public class QuestionLoader : ScriptableObject
         currentlyNotUsedQuestions.Remove(returnval);
         return returnval;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 }
 public interface IQuestion
 {
