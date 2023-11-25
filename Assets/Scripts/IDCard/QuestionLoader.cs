@@ -21,6 +21,7 @@ public class QuestionLoader : ScriptableObject
         //Question types added, yay.
         resetUsedQs();
     }
+
     public void resetUsedQs()
     {
         currentlyNotUsedQuestions.Clear();
