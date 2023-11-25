@@ -10,8 +10,12 @@ public class TextAssigner : MonoBehaviour
     public TextMeshProUGUI choice0;
     public TextMeshProUGUI choice1;
     public TextMeshProUGUI choice2;
+    public TextMeshProUGUI bouncerAnswer;
     public QuestionLoader questionLoader=new QuestionLoader();
     List<int> correctChoices;
+    private string bouncerAnswerOnSucces = null;
+    int questionsDone = 0;
+    IDCard currentIDCard=null;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,28 +28,50 @@ public class TextAssigner : MonoBehaviour
         List<string> responses;
 
         IQuestion question=questionLoader.getNextQuestion();            
-        question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices);
+        question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices, out bouncerAnswerOnSucces);
         bouncerText.text = bouncerTalk;
         choice0.text = responses[0];
         choice1.text = responses[1];
         choice2.text = responses[2];
+        currentIDCard = id;
     }
     public void resetQLoader()
     {
         questionLoader.resetUsedQs();
+        questionsDone = 0;
     }
     public void button0Press() { processButtonPress(0); }
     public void button1Press() { processButtonPress(1); }
     public void button2Press() { processButtonPress(2); }
+    public void buttonNextPress()
+    {
+        int maxQuestionsPerBouncer = 2;
+        questionsDone++;
+        if (questionsDone<maxQuestionsPerBouncer)
+        {            
+            loadQuestion(currentIDCard);
+            //Deactivate answer UI, activate the question UI again
+        }
+        else
+        {
+            //load next scene
+            resetQLoader();
+            currentIDCard=null;
+            //load into scene.
+        }
+
+    }
 
     public void processButtonPress(int buttonID) {
         if(correctChoices.Contains(buttonID))
         {
-            //Do the succeed action. Store state how?
+            bouncerAnswer.text = bouncerAnswerOnSucces;
+            //Activate the answer UI, deactivate the question UI.
         }
         else
         {
-            //Game over man!
+            bouncerAnswer.text="That doesn't match the ID. Are you lying to me?";
+            //Game over man! Strike/gameover screen on pressing 'next' button.
         }
     }
     // Update is called once per frame

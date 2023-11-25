@@ -17,14 +17,15 @@ public class FootControl : MonoBehaviour
     [SerializeField] GameObject IKtargetR;
     [SerializeField] Transform Camera;
     [SerializeField] Transform IKroot;
+    [SerializeField] float multiplier;
 
     // Start is called before the first frame update
     void Start()
     {
         if (MouseCheck.mouseL != null && MouseCheck.mouseR != null)
         {
-            mousePosL = MouseCheck.mouseL.ViewportPosition;
-            mousePosR = MouseCheck.mouseR.ViewportPosition;
+            mousePosL = MouseCheck.mouseL.Axes;
+            mousePosR = MouseCheck.mouseR.Axes;
         }
 
         starty = footL.transform.position.y;
@@ -55,10 +56,10 @@ public class FootControl : MonoBehaviour
         {
             foreach (var mouse in IInputProvider.Instance.ActiveMice)
             {
-                if (MouseCheck.mouseL == null) MouseCheck.mouseL = mouse;
-                else if (MouseCheck.mouseR == null)
+                if (MouseCheck.mouseR == null) MouseCheck.mouseR = mouse;
+                else if (MouseCheck.mouseL == null)
                 {
-                    MouseCheck.mouseR = mouse;
+                    MouseCheck.mouseL = mouse;
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
                     break;
@@ -68,18 +69,15 @@ public class FootControl : MonoBehaviour
 
         float yangle = Camera.rotation.eulerAngles.y;
 
-        Vector2 newPosL = MouseCheck.mouseL.ViewportPosition;
+        Vector2 newPosL = MouseCheck.mouseL.Axes;
 
         if (footL.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosL - mousePosL;
-            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.02f;
+            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPosL.x, 0, newPosL.y) * multiplier;
             //mousePosL = newPosL;
         }
-        else
-        {
-            //MouseCheck.mouseL.ViewportPosition = mousePosL;
-        }
+
         mousePosL = newPosL;
 
         if (MouseCheck.mouseL.IsAnyButtonPressed)
@@ -97,20 +95,17 @@ public class FootControl : MonoBehaviour
             }
         }
 
-        Vector2 newPosR = MouseCheck.mouseR.ViewportPosition;
+        Vector2 newPosR = MouseCheck.mouseR.Axes;
 
 
         if (footR.transform.position.y > starty)
         {
             Vector2 deltaPos = newPosR - mousePosR;
-            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(deltaPos.x, 0, deltaPos.y) * 0.02f;
+            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPosR.x, 0, newPosR.y) * multiplier;
             //mousePosR = newPosR;
 
         }
-        else
-        {
-            //MouseCheck.mouseR.ViewportPosition = mousePosR;
-        }
+
         mousePosR = newPosR;
 
         if (MouseCheck.mouseR.IsAnyButtonPressed)
