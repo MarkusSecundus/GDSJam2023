@@ -923,7 +923,11 @@ PrefabInstance:
     - target: {fileID: 5530114988834090548, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_Mass
+<<<<<<< HEAD
+      value: 10
+=======
       value: 50
+>>>>>>> c56cf4f1c9db8d0f7d8537add2a3200679f1b534
       objectReference: {fileID: 0}
     - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -1003,7 +1007,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 287740746}
