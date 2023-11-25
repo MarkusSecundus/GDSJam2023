@@ -16,7 +16,7 @@ public class RotateJointAccordingToTarget : MonoBehaviour
     void Start()
     {
         _joint = GetComponent<ConfigurableJoint>();
-        _joint.configuredInWorldSpace = true;
+        _joint.configuredInWorldSpace = false;
         _rotator = new JointRotationHelper(_joint);
         _target = NamespaceRoot.FindRecursive(this.name);
     }
