@@ -10,6 +10,7 @@ namespace MarkusSecundus.PhysicsSwordfight.Cosmetics
     /// </summary>
     public class CameraFollowPoint : MonoBehaviour
     {
+        public float LerpFactor = 1f;
         /// <summary>
         /// Transform to follow
         /// </summary>
@@ -18,7 +19,11 @@ namespace MarkusSecundus.PhysicsSwordfight.Cosmetics
         {
             if (Target.IsNotNil())
             {
-                (transform.position, transform.rotation, transform.localScale) = (Target.position, Target.rotation, Target.localScale);
+                (transform.position, transform.rotation, transform.localScale) = (
+                    Vector3.Lerp(transform.position, Target.position, LerpFactor), 
+                    Quaternion.Lerp(transform.rotation, Target.rotation, LerpFactor), 
+                    Vector3.Lerp(transform.localScale, Target.localScale, LerpFactor));
+
             }
         }
     }
