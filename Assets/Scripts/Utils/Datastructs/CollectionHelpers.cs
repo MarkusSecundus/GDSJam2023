@@ -89,6 +89,8 @@ namespace MarkusSecundus.Utils.Datastructs
         /// <param name="self">Collection to be checked for emptiness</param>
         /// <returns><c>true</c> iff the collection is null or empty</returns>
         public static bool IsNullOrEmpty<T>(this IReadOnlyCollection<T> self) => self.IsNil() || self.Count <= 0;
+        public static bool IsEmpty<T>(this IReadOnlyCollection<T> self) => self.Count <= 0;
+
 
         /// <summary>
         /// Gets smallest value in a stream, using provided selector for comparisons.

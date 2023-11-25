@@ -10,8 +10,8 @@ using UnityEngine.UI;
 
 public class MouseCheck : MonoBehaviour
 {
-    IMouse mouseL = null;
-    IMouse mouseR = null;
+    public static IMouse mouseL = null;
+    public static IMouse mouseR = null;
 
     [SerializeField] private Button buttonL;
     [SerializeField] private Button buttonR;
@@ -50,6 +50,7 @@ public class MouseCheck : MonoBehaviour
 
         foreach (IMouse mouse in IInputProvider.Instance.ActiveMice)
         {
+            //mouse.ViewportPosition = new Vector2(50, 50);
 
             if ((buttonL.transform as RectTransform).GetRect().Contains(mouse.ViewportPosition))
             {
@@ -74,7 +75,7 @@ public class MouseCheck : MonoBehaviour
 
         if (mouseL != null && mouseR != null && mouseL != mouseR)
         {
-            Debug.Log("CHANGE SCENES NOW");
+            SceneManager.LoadScene(scene);
         }
     }
 
