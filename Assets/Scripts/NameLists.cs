@@ -42,13 +42,78 @@ public static class NameLists
     private static void initNames()
     {
 
+        names = new List<string> { "James", 
+            "John", 
+            "Robert", 
+            "Michael", 
+            "William", 
+            "David", 
+            "Richard", 
+            "Charles", 
+            "Joseph", 
+            "Thomas",
+            "Christopher",
+            "Daniel",
+            "Paul",
+            "Mark",
+            "Donald",
+            "George",
+            "Kenneth",
+            "Steven",
+            "Edward",
+            "Brian"
+        };
+
     }
     private static void initSurnames()
     {
-
+        surnames = new List<string>
+        {
+            "Smith",
+            "Johnson",
+            "Williams",
+            "Brown",
+            "Jones",
+            "Garcia",
+            "Miller",
+            "Davis",
+            "Rodriguez",
+            "Martinez",
+            "White",
+            "Lopez",
+            "Lee",
+            "Wilson",
+            "Anderson",
+            "Thomas",
+            "Taylor",
+            "Moore",
+            "Jackson",
+            "Martin"
+        };
     }
     private static void initCities()
     {
-
+        cities = new List<string>
+        {
+            "New York",
+            "Philadelphia",
+            "Washington",
+            "Atlanta",
+            "Charleston",
+            "San Francisco",
+            "Los Angeles",
+            "Dallas",
+            "Austin",
+            "Miami",
+            "Houston",
+            "San Antonio",
+            "Chicago",
+            "Charlotte",
+            "Las Vegas",
+            "Seattle",
+            "Memphis",
+            "Indianapolis",
+            "Detroit"
+        };
     }
 }
