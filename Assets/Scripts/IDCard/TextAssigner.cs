@@ -46,9 +46,9 @@ public class TextAssigner : MonoBehaviour
     public void buttonNextPress()
     {
         int maxQuestionsPerBouncer = 2;
-        if(questionsDone+1<maxQuestionsPerBouncer)
-        {
-            questionsDone++;
+        questionsDone++;
+        if (questionsDone<maxQuestionsPerBouncer)
+        {            
             loadQuestion(currentIDCard);
             //Deactivate answer UI, activate the question UI again
         }
@@ -73,7 +73,6 @@ public class TextAssigner : MonoBehaviour
             bouncerAnswer.text="That doesn't match the ID. Are you lying to me?";
             //Game over man! Strike/gameover screen on pressing 'next' button.
         }
-        firstQuestionDone=true;
     }
     // Update is called once per frame
     void Update()
