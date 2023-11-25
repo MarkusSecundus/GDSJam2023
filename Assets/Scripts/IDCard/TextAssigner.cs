@@ -50,7 +50,7 @@ public class TextAssigner : MonoBehaviour
         {
             questionsDone++;
             loadQuestion(currentIDCard);
-            //Deactivate yourself, activate the question UI again
+            //Deactivate answer UI, activate the question UI again
         }
         else
         {
