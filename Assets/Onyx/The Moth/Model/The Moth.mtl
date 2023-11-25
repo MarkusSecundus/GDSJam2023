@@ -1,0 +1,39 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.236340372)
+
+newmtl blinn1SG
+kd 0 0 0
+ka 0 0 0
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+illum 1
+map_kd Glass_reflect.jpg
+
+newmtl blinn2SG
+kd 0 0 0
+ka 0 0 0
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+illum 1
+map_kd Glass_Texture.jpg
+
+newmtl blinn3SG
+kd 0 0 0
+ka 0 0 0
+ks 0.5 0.5 0.5
+ke 0 0 0
+d 1
+illum 1
+map_kd Wooden_Door.psd
+
+newmtl lambert4SG
+kd 0 0 0
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+illum 1
+map_kd The_Moth.psd
+
