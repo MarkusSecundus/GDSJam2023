@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IDgetter : MonoBehaviour
 {
@@ -27,11 +28,19 @@ public class IDgetter : MonoBehaviour
 
         TextMeshProUGUI marital = gameObject.transform.Find("Marital").GetComponent<TextMeshProUGUI>();
         marital.text = card.maritalStatus.ToString();
+
+        StartCoroutine("ChangeScene");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("WalkLevel");
     }
 }
