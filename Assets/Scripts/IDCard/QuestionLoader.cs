@@ -88,7 +88,15 @@ public class NameQClass: IQuestion
     public string[] names;//TODO init this.
     public void GetCompleteQuestionDetails(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
-
+        int selector = Random.Range(0, 2);
+        if (selector == 0)
+        {
+            GetQ1(card, out question, out answers, out correctAnswers);
+        }
+        else
+        {
+            GetQ2(card, out question, out answers, out correctAnswers);
+        }
     }
     public void GetQ1(IDCard card, out string question, out List<string> answers, out List<int> correctAnswers)
     {
