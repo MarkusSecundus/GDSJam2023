@@ -483,6 +483,51 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &806858139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806858141}
+  - component: {fileID: 806858140}
+  m_Layer: 0
+  m_Name: TimeScaleSetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &806858140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806858139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944e4e55c5b57474898607d90f78aad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 0.23
+--- !u!4 &806858141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806858139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -110.599236, y: -9.483514, z: 177.64615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +720,26 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 78640106496343546, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -685,13 +750,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 50000
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -705,6 +810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689642727756670594, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -712,6 +822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211060019903039494, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2211060019903039494, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -730,6 +845,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872343737642404741, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -740,6 +860,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099883764057813788, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -747,6 +887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404093981053087119, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404093981053087119, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -810,6 +955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3731799378087958417, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731799378087958417, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -820,13 +970,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 50000
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168983201420198329, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5260546318266284527, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -840,6 +1060,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358809207534815288, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -848,6 +1088,61 @@ PrefabInstance:
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
       objectReference: {fileID: 0}
+    - target: {fileID: 6131191883534957302, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287824220687242421, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293682912154852768, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6677053044735602021, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionDamper
@@ -860,13 +1155,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 50000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -875,6 +1190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
       value: 5000
       objectReference: {fileID: 0}
@@ -883,6 +1203,16 @@ PrefabInstance:
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
       objectReference: {fileID: 0}
+    - target: {fileID: 8406639650108980597, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8939261845334927579, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionDamper
@@ -895,13 +1225,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularYMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_AngularZMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
       propertyPath: m_SlerpDrive.positionDamper
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 50000
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -913,7 +1268,10 @@ PrefabInstance:
       propertyPath: m_SlerpDrive.positionSpring
       value: 50000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7898771362533760396, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
+    - {fileID: 4871753988506141756, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
+    - {fileID: 4870334012626560313, guid: a3aebad05c1c5e34081047fc27604340, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -922,6 +1280,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 806858141}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
