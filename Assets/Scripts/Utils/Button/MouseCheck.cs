@@ -75,7 +75,7 @@ public class MouseCheck : MonoBehaviour
 
         if (mouseL != null && mouseR != null && mouseL != mouseR)
         {
-            Debug.Log("CHANGE SCENES NOW");
+            SceneManager.LoadScene(scene);
         }
     }
 
