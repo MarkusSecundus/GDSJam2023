@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 795275776610422716, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 10000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 1063533121916112170, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -1066,7 +1066,7 @@ PrefabInstance:
     - target: {fileID: 3739366887265168285, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 10000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4742422623717554357, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -1226,7 +1226,7 @@ PrefabInstance:
     - target: {fileID: 7427730560272762475, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 10000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 8299612021809885893, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
@@ -1416,7 +1416,7 @@ PrefabInstance:
     - target: {fileID: 9041470994995601997, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
       propertyPath: m_SlerpDrive.positionSpring
-      value: 10000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 9115240296225438523, guid: a3aebad05c1c5e34081047fc27604340,
         type: 3}
