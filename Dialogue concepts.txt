@@ -1,44 +1,48 @@
 Actually accepted questions:
+Group AGE:
 	"Could you just repeat how old you are again?" (Three random values, including the actual one)
- 
+ 	"By the way, this bar is mostly for ages 30-35."
+	->I'm a bit young then, but I will manage.
+	->"I'm exactly in that range then!"
+	->"I may be a bit old for it, but I want to experience how I felt back then again."
+Group NAME:	
 	"Do you have any other document to prove this is you? No? Then tell me what your name is, just so I am sure."
-	"So, what's your surname? I think I know someone with the surname."
-	(Choose from three each)
+	(RNG three)
+	"Oh, I think my name's the same as you."
+	->Are you also named XYZ? (RNG three)
+	"XYZ, I hope you enjoy yourself here."
+		->"Thanks."
+		->two answers of "Thanks, but my name is ABC"
 	
-	Town of origin/residence:
+Group SURNAME:
+	"What's your surname? I think I know someone with the surname."
+	->"Wait, you know another XYZ?"
+	"Could you confirm me your surname?"
+	(RNG three)
+	
+Group TOWN OF ORIGIN/RESIDENCE:
 	"You know, have you ever been to XYZ?"
 	->Not origin/residence: "I don't live there, nor was I born there."
 	->"I was born there."
 	->"I live there now, actually."
 	(Note: requires a slight modification of the actual system, doable IMO.)
 
-NOTE: Ideally I want another 5-6 questions.
+	"So, where do you live now?"
+	(Again, randomized three answers)
 	
-	
-________________________
-Surname only: "Say, would you happen to know the ABCs from around here?"
-	"I know nobody with that surname."
-	"No, they must just have the same surname as I do."
+	"Where were you born? I think I come from the same city."
+	(Same, three random)
 
-Name question only:
-	"No way, that's my name too!"
-	answer with "No way, are you XYZ too?"->Add three answers, always mention the name, just once using the correct one.
+Group MARITAL status
+	"Condolences about your wife."
+	->I haven't even had a wife
+	->My wife's still alive and with me, you must have read that wrong.
+	->Thanks...
+	
+	"Married, eh? Hope I am as lucky as you are."
+	->Single, sadly.
+	->Yeah. It's no rose garden, but I'm happy.
+	->Can we please not talk about my departed wife?
 
-
+Fuckup: "Wait, that doesn't match with what the ID says. Stay right here, I'm calling the cops."
 	
-Marital status:
-	"Are you coming here alone?"
-	->"Yes, I don't have anybody to come here with."
-	->"Yes, my wife's not with me."
-	
-	"So what brings you to our city?"
-	->Lone travels.
-	->Visit with my wife.
-	->Mourning my wife (Widower)
-	
-	
-Age question: "Don't you look too young for your age?" (Answer with "Not really. Maybe a bit." or "Oh, you flatter me!"->Needs context for above/below.
-	(Above one, consider if it should be used)	
-	"So what brings you here?"
-	->Young age: Adventure, seeing the world before starting work.
-	->Older: Business trip
