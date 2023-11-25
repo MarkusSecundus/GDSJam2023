@@ -24,7 +24,12 @@ namespace MarkusSecundus.MultiInput.Fallback
             private Mouse() { }
             internal static Mouse Instance = new();
 
-            public Vector2 ViewportPosition => throw new NotImplementedException();
+            public Vector2 ViewportPosition
+            {
+                get { throw new NotImplementedException(); }
+                set { throw new NotImplementedException(); }
+            } 
+            //=> throw new NotImplementedException();
 
             public Vector2 ScrollDelta => Input.mouseScrollDelta;
 

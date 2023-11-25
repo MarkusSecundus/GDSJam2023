@@ -8,7 +8,7 @@ namespace MarkusSecundus.MultiInput
     public interface IMouse
     {
         public bool IsActive { get; set; }
-        public Vector2 ViewportPosition { get; }
+        public Vector2 ViewportPosition { get; set; }
         public Vector2 ScrollDelta { get; }
         public Vector2 ViewportPositionNormalized { get; }
         public Vector2 ScreenPosition { get; }
