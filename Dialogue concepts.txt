@@ -10,15 +10,15 @@ Group NAME:
 	(RNG three)
 	"Oh, I think my name's the same as you."
 	->Are you also named XYZ? (RNG three)
-	"XYZ, I hope you enjoy yourself here."
-		->"Thanks."
-		->two answers of "Thanks, but my name is ABC"
 	
 Group SURNAME:
-	"What's your surname? I think I know someone with the surname."
-	->"Wait, you know another XYZ?"
 	"Could you confirm me your surname?"
 	(RNG three)
+	"What's your surname? I think I know someone with the surname."
+	->"Wait, you know another XYZ?"
+	"I hope you enjoy yourself here Mr. XYZ"
+		->"Thanks."
+		->two answers of "Thanks. Just one thing: My surname is XYZ"
 	
 Group TOWN OF ORIGIN/RESIDENCE:
 	"You know, have you ever been to XYZ?"
