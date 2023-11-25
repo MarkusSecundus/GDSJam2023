@@ -24,7 +24,7 @@ public class IDCard : ScriptableObject
         }
     }
 
-    public string Name = "John";
+    public string FirstName = "John";
     public string Surname = "Doe";
     public uint age=21;
     public string TownOfOrigin = "Detroit";

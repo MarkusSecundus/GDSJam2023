@@ -11,7 +11,7 @@ public class IDgetter : MonoBehaviour
         IDCard card = IDCard.Instance;
 
         TextMeshProUGUI fName = gameObject.transform.Find("FName").GetComponent<TextMeshProUGUI>();
-        fName.text = card.Name;
+        fName.text = card.FirstName;
 
         TextMeshProUGUI lName = gameObject.transform.Find("LName").GetComponent<TextMeshProUGUI>();
         lName.text = card.Surname;
