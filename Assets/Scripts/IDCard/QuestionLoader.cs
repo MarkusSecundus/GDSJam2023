@@ -74,7 +74,7 @@ public class AgeQClass : IQuestion
             }
             answers.Add(ageToAdd.ToString());
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.age.ToString();
         correctAnswers.Add(correctAnswer);
         bouncerAOnSuccess = "OK, that checks out.";
@@ -134,7 +134,7 @@ public class NameQClass: IQuestion
             }
             answers.Add(names[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.FirstName;
         correctAnswers.Add(correctAnswer);
         bouncerAOnSuccess="Yep, that checks out.";
@@ -154,10 +154,10 @@ public class NameQClass: IQuestion
             }
             answers.Add(names[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.FirstName;
         correctAnswers.Add(correctAnswer);
-        int bouncerNameRNG=Random.Range(0, 2);
+        int bouncerNameRNG=Random.Range(0, 3);
 
         if (correctAnswers.Contains(bouncerNameRNG))
         {
@@ -211,7 +211,7 @@ public class SurnameQClass:IQuestion
             }
             answers.Add(surnames[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.Surname;
         correctAnswers.Add(correctAnswer);
         bouncerAOnSuccess = "All right, that checks out.";
@@ -267,7 +267,7 @@ public class SurnameQClass:IQuestion
             }
             answers.Add(surnames[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.Surname;
         correctAnswers.Add(correctAnswer);
         for (int i = 0; i < 3; i++)
@@ -351,7 +351,7 @@ public class TownQClass : IQuestion
             }
             answers.Add(towns[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.TownOfResidence;
         correctAnswers.Add(correctAnswer);
         bouncerAOnSuccess = "I don't know the place that well, as a bouncer you don't get around much.";
@@ -370,9 +370,18 @@ public class TownQClass : IQuestion
             }
             answers.Add(towns[index]);
         }
-        int correctAnswer = Random.Range(0, 2);
+        int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.TownOfOrigin;
         correctAnswers.Add(correctAnswer);
+        int wasSameCity = Random.Range(0, 3);
+        if (wasSameCity == 0)
+        {
+            bouncerAOnSuccess = "Cool, I was also born there.";
+        }
+        else
+        {
+            bouncerAOnSuccess = "Shame, I was born elsewhere.";
+        }
     }
 }
 
