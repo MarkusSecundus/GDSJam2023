@@ -10,8 +10,8 @@ using UnityEngine.UI;
 
 public class MouseCheck : MonoBehaviour
 {
-    IMouse mouseL = null;
-    IMouse mouseR = null;
+    public static IMouse mouseL = null;
+    public static IMouse mouseR = null;
 
     [SerializeField] private Button buttonL;
     [SerializeField] private Button buttonR;
