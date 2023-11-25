@@ -26,18 +26,18 @@ public class FootControl : MonoBehaviour
     void Update()
     {
         Vector2 newPosL = MouseCheck.mouseL.ViewportPosition;
-        Vector2 deltaPos = newPosL - mousePosL;
-
+        
         if (footL.transform.position.y > starty)
         {
+            Vector2 deltaPos = newPosL - mousePosL;
             footL.transform.position = footL.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
-            mousePosL = newPosL;
+            //mousePosL = newPosL;
         }
         else
         {
-            MouseCheck.mouseL.ViewportPosition = mousePosL;
+            //MouseCheck.mouseL.ViewportPosition = mousePosL;
         }
-
+        mousePosL = newPosL;
 
         if (MouseCheck.mouseL.IsAnyButtonPressed)
         {
@@ -55,18 +55,19 @@ public class FootControl : MonoBehaviour
         }     
 
         Vector2 newPosR = MouseCheck.mouseR.ViewportPosition;
-        deltaPos = newPosR - mousePosR;
+        
 
         if (footR.transform.position.y > starty)
         {
+            Vector2 deltaPos = newPosR - mousePosR;
             footR.transform.position = footR.transform.position + new Vector3(deltaPos.x, 0, deltaPos.y) * 0.01f;
-            mousePosR = newPosR;
+            //mousePosR = newPosR;
         }
         else
         {
-            MouseCheck.mouseR.ViewportPosition = mousePosR;
+            //MouseCheck.mouseR.ViewportPosition = mousePosR;
         }
-
+        mousePosR = newPosR;
 
         if (MouseCheck.mouseR.IsAnyButtonPressed)
         {
