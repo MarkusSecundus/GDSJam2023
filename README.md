@@ -18,4 +18,4 @@ Removed sounds (incompatible with FOSS licence):
 
 
 --------------------
-_[Link to MultiInput library](https://github.com/MarkusSecundus/UnityMultiInput/tree/main) in case anyone wanted to used it as well_
+_[Link to MultiInput library](https://github.com/MarkusSecundus/UnityMultiInput) in case anyone wanted to used it as well_
