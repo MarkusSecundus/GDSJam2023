@@ -11,7 +11,11 @@ public class ShowDialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (var mouse in IInputProvider.Instance.ActiveMice)
+        {
+            mouse.ShouldDrawCursor = true;
+            mouse.IsActive = true;
+        }
     }
 
     // Update is called once per frame
