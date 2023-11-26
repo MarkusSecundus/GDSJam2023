@@ -11,11 +11,11 @@ Sounds:
  - [Pub song](https://freesound.org/people/16H_Panska_Stejskal_David/sounds/498073/)
 
 
-Removed sounds incompatible with opensource license:
+Removed sounds (incompatible with FOSS licence):
  - Footsteps
  - Gulp
  - Pub noise ambient
 
 
 --------------------
-_[MultiInput library](https://github.com/MarkusSecundus/UnityMultiInput/tree/main) in case anyone wanted to used it as well_
+_[Link to MultiInput library](https://github.com/MarkusSecundus/UnityMultiInput/tree/main) in case anyone wanted to used it as well_
