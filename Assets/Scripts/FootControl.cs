@@ -123,23 +123,33 @@ public class FootControl : MonoBehaviour
         }
     }
 
+    private GameObject _otherFoot(GameObject foot) => foot == footL ? footR : footL;
+    private float _getGroundHeight(GameObject foot)
+    {
+        return starty;
+        Physics.Raycast(foot.transform.position, Vector3.down, out var info, LayerMask.NameToLayer("Ground"));
+
+        return info.point.y + 0.5f;
+    } 
+
+
     private void MoveLeftFoot(float yangle) => MoveFoot(yangle, mouseL, footL, ref mousePosL);
     private void MoveRightFoot(float yangle) => MoveFoot(yangle, mouseR, footR, ref mousePosR);
 
     private void MoveFoot(float yangle, IMouse mouse, GameObject foot, ref Vector2 mousePos)
     {
         Vector2 newPos = mouse.Axes;
-        if (foot.transform.position.y > starty)
+        var groundY = _getGroundHeight(foot);
+
+        if (foot.transform.position.y > groundY)
         {
-            Vector2 deltaPos = newPos - mousePos;
             foot.transform.position = foot.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPos.x, 0, newPos.y) * multiplier;
-            //mousePos = newPos;
         }
         mousePos = newPos;
 
         if (mouse.IsAnyButtonPressed)
         {
-            if (foot.transform.position.y < starty + maxHeight)
+            if (foot.transform.position.y < groundY + maxHeight)
             {
                 foot.transform.position = foot.transform.position + Vector3.up * Time.deltaTime * 3;
             }
