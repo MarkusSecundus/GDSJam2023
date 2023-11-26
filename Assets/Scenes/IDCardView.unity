@@ -737,6 +737,7 @@ MonoBehaviour:
   - WalkLevel 1
   - WalkLevel 2
   - WalkLevel 3
+  - WalkLevel 4
   end: End
 --- !u!95 &223269663
 Animator:
