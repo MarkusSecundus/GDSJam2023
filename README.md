@@ -11,7 +11,7 @@ Sounds:
  - [Pub song](https://freesound.org/people/16H_Panska_Stejskal_David/sounds/498073/)
 
 
-Sounds incompatible with opensource license:
+Removed sounds incompatible with opensource license:
  - Footsteps
  - Gulp
  - Pub noise ambient
