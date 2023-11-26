@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class IDgetter : MonoBehaviour
 {
-    [SerializeField] string nextLevel;
+    public static int counter = -1;
+    [SerializeField] string level0;
+    [SerializeField] string level1;
+    [SerializeField] string level2;
+    [SerializeField] string end;
     // Start is called before the first frame update
     void Start()
     {
+        counter++;
         IDCard card = IDCard.Instance;
 
         TextMeshProUGUI fName = gameObject.transform.Find("FName").GetComponent<TextMeshProUGUI>();
@@ -39,9 +44,34 @@ public class IDgetter : MonoBehaviour
         
     }
 
+    public static void InnitCounter()
+    {
+        counter = -1;
+    }
+
     IEnumerator ChangeScene()
     {
+        if(counter == 3)
+        {
+            counter = 0;
+            SceneManager.LoadScene(end);
+        }
+
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(nextLevel);
+        switch (counter)
+        {
+            case 0:
+                SceneManager.LoadScene(level0);
+                break;
+            case 1:
+                SceneManager.LoadScene(level1);
+                break;
+            case 2:
+                SceneManager.LoadScene(level2);
+                break;
+            default:
+                break;
+        }
+        
     }
 }
