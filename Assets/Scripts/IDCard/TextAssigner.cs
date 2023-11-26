@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,17 +18,22 @@ public class TextAssigner : MonoBehaviour
     private string bouncerAnswerOnSucces = null;
     int questionsDone = 0;
     IDCard currentIDCard = null;
+    [SerializeField] GameObject nextButton;
     [SerializeField] string nextScene;
+    [SerializeField] string failScene;
+
+    bool fail = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        fail = false;
     }
 
     public void loadQuestion(IDCard id)
     {
         string bouncerTalk;
         List<string> responses;
+        nextButton.SetActive(false);
 
         IQuestion question = questionLoader.getNextQuestion();
         question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices, out bouncerAnswerOnSucces);
@@ -36,6 +42,8 @@ public class TextAssigner : MonoBehaviour
         choice1.text = responses[1];
         choice2.text = responses[2];
         currentIDCard = id;
+
+        bouncerAnswer.enabled = false;
     }
     public void resetQLoader()
     {
@@ -47,18 +55,32 @@ public class TextAssigner : MonoBehaviour
     public void button2Press() { processButtonPress(2); }
     public void buttonNextPress()
     {
+        if (fail)
+        {
+            resetQLoader();
+            currentIDCard = null;
+            SceneManager.LoadScene(failScene);
+            IDCard.NullOutID();
+        }
+
         int maxQuestionsPerBouncer = 2;
         questionsDone++;
         if (questionsDone < maxQuestionsPerBouncer)
         {
             loadQuestion(currentIDCard);
             //Deactivate answer UI, activate the question UI again
+            choice0.enabled = true;
+            choice1.enabled = true;
+            choice2.enabled = true;
+
+            nextButton.SetActive(false);
         }
         else
         {
             //load next scene
             resetQLoader();
             currentIDCard = null;
+            IDCard.NullOutID();
             SceneManager.LoadScene(nextScene);
         }
 
@@ -66,9 +88,13 @@ public class TextAssigner : MonoBehaviour
 
     public void processButtonPress(int buttonID)
     {
+        bouncerAnswer.enabled = true;
+        nextButton.SetActive(true);
+
         if (correctChoices.Contains(buttonID))
         {
             bouncerAnswer.text = bouncerAnswerOnSucces;
+
             choice0.enabled = false;
             choice1.enabled = false;
             choice2.enabled = false;
@@ -76,9 +102,9 @@ public class TextAssigner : MonoBehaviour
         else
         {
             bouncerAnswer.text = "That doesn't match the ID. Are you lying to me?";
+            fail = true;
             //Game over man! Strike/gameover screen on pressing 'next' button.
-            Button nextButton = transform.Find("ButtonNext").GetComponent<Button>();
-            nextButton.enabled = true;
+            nextButton.SetActive(true);
         }
     }
     // Update is called once per frame

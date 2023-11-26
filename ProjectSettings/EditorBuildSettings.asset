@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WalkLevel.unity
     guid: 864733005177c2d47b66fb4496abdf7d
+  - enabled: 1
+    path: Assets/Scenes/DrinkTransition.unity
+    guid: f7ab89bcba30ccd45a57577b12856d4c
   m_configObjects: {}
