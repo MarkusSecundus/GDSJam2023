@@ -59,8 +59,9 @@ public class TextAssigner : MonoBehaviour
         {
             resetQLoader();
             currentIDCard = null;
-            SceneManager.LoadScene(failScene);
             IDCard.NullOutID();
+            SceneManager.LoadScene(failScene);          
+            return;
         }
 
         int maxQuestionsPerBouncer = 2;
