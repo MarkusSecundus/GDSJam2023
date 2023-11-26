@@ -28,11 +28,6 @@ public class TextAssigner : MonoBehaviour
     void Start()
     {
         fail = false;
-        foreach(var mouse in IInputProvider.Instance.ActiveMice)
-        {
-            mouse.ShouldDrawCursor = true;
-            mouse.IsActive = true;
-        }
     }
 
     public void loadQuestion(IDCard id)
