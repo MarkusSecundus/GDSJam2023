@@ -39,7 +39,6 @@ public class TextAssigner : MonoBehaviour
         string bouncerTalk;
         List<string> responses;
         nextButton.SetActive(false);
-        strike = false;
         
         IQuestion question = questionLoader.getNextQuestion();
         question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices, out bouncerAnswerOnSucces);
