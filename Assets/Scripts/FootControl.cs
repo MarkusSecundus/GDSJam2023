@@ -126,7 +126,7 @@ public class FootControl : MonoBehaviour
     private GameObject _otherFoot(GameObject foot) => foot == footL ? footR : footL;
     private float _getGroundHeight(GameObject foot)
     {
-        if (!Physics.Raycast(foot.transform.position, Vector3.down, out var info, LayerMask.NameToLayer("Wall")))
+        if (!Physics.Raycast(foot.transform.position, Vector3.down * 10, out var info, LayerMask.NameToLayer("Wall")))
         {
             Debug.Log("Raycast hit nothing!");
             return starty;
