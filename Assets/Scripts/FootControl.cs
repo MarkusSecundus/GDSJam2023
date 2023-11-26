@@ -1,6 +1,8 @@
 using MarkusSecundus.MultiInput;
+using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FootControl : MonoBehaviour
@@ -11,6 +13,8 @@ public class FootControl : MonoBehaviour
         LEFT,
         RIGHT
     }
+
+    IMouse mouseL, mouseR;
 
     Vector2 mousePosL;
     Vector2 mousePosR;
@@ -34,8 +38,7 @@ public class FootControl : MonoBehaviour
     {
         if (MouseCheck.mouseL != null && MouseCheck.mouseR != null)
         {
-            mousePosL = MouseCheck.mouseL.Axes;
-            mousePosR = MouseCheck.mouseR.Axes;
+            SetMice(MouseCheck.mouseL, MouseCheck.mouseR);
         }
 
         starty = footL.transform.position.y;
@@ -54,6 +57,35 @@ public class FootControl : MonoBehaviour
         IKtargetR.transform.position = footR.transform.position;
     }
 
+
+    void SetMice(IMouse left, IMouse right)
+    {
+        mouseL = left;
+        mouseR = right;
+
+        mousePosL = left.Axes;
+        mousePosR = right.Axes;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+
+        handleCursor(left, footModelL, footL);
+        handleCursor(right, footModelR, footR);
+
+        void handleCursor(IMouse m, Renderer footModel, GameObject ball)
+        {
+            footModel.material.color = m.CursorColor;
+            foreach (var r in ball.GetComponentsInChildren<Renderer>())
+            {
+                Debug.Log($"Setting color to {m.CursorColor}", this);
+                r.material.SetColor("_EmissionColor", m.CursorColor) ;
+            }
+            m.ShouldDrawCursor = false;
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -62,38 +94,28 @@ public class FootControl : MonoBehaviour
             return;
         }
 
-        if (MouseCheck.mouseR == null && MouseCheck.mouseL == null)
+        if (mouseR == null && mouseL == null)
         {
-            foreach (var mouse in IInputProvider.Instance.ActiveMice)
-            {
-                if (MouseCheck.mouseR == null) MouseCheck.mouseR = mouse;
-                else if (MouseCheck.mouseL == null)
-                {
-                    MouseCheck.mouseL = mouse;
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
-                    break;
-                }
-            }
+            SetMice(IInputProvider.Instance.ActiveMice.ElementAt(0), IInputProvider.Instance.ActiveMice.ElementAt(1));
         }
         
         float yangle = Camera.rotation.eulerAngles.y;
 
-        if(!MouseCheck.mouseL.IsAnyButtonPressed && !MouseCheck.mouseR.IsAnyButtonPressed)
+        if(!mouseL.IsAnyButtonPressed && !mouseR.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.NONE;
             FallFoot(footR);
             FallFoot(footL);
         }
 
-        if((pressedFlag == Pressed.NONE || pressedFlag == Pressed.LEFT) && MouseCheck.mouseL.IsAnyButtonPressed)
+        if((pressedFlag == Pressed.NONE || pressedFlag == Pressed.LEFT) && mouseL.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.LEFT;
             MoveLeftFoot(yangle);
             FallFoot(footR);
         }
 
-        if ((pressedFlag == Pressed.NONE || pressedFlag == Pressed.RIGHT) && MouseCheck.mouseR.IsAnyButtonPressed)
+        if ((pressedFlag == Pressed.NONE || pressedFlag == Pressed.RIGHT) && mouseR.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.RIGHT;
             MoveRightFoot(yangle);
@@ -101,8 +123,8 @@ public class FootControl : MonoBehaviour
         }
     }
 
-    private void MoveLeftFoot(float yangle) => MoveFoot(yangle, MouseCheck.mouseL, footL, ref mousePosL);
-    private void MoveRightFoot(float yangle) => MoveFoot(yangle, MouseCheck.mouseR, footR, ref mousePosR);
+    private void MoveLeftFoot(float yangle) => MoveFoot(yangle, mouseL, footL, ref mousePosL);
+    private void MoveRightFoot(float yangle) => MoveFoot(yangle, mouseR, footR, ref mousePosR);
 
     private void MoveFoot(float yangle, IMouse mouse, GameObject foot, ref Vector2 mousePos)
     {
