@@ -128,7 +128,7 @@ public class FootControl : MonoBehaviour
     private float _getGroundHeight(GameObject foot)
     {
         var castPosition = foot.transform.position + Vector3.up;
-        if (!Physics.Raycast(castPosition, Vector3.down * 10, out var info, LayerMask.NameToLayer("Wall")))
+        if (!Physics.Raycast(castPosition, Vector3.down * 10, out var info, LayerMask.NameToLayer("Floor")))
         {
             Debug.Log("Raycast hit nothing!");
             return starty;
