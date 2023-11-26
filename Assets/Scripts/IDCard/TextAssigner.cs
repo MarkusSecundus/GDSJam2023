@@ -23,6 +23,8 @@ public class TextAssigner : MonoBehaviour
     [SerializeField] string nextScene;
     [SerializeField] string failScene;
 
+    [SerializeField] GameObject Button0, Button1, Button2;
+
     bool fail = false;
     // Start is called before the first frame update
     void Start()
@@ -71,10 +73,13 @@ public class TextAssigner : MonoBehaviour
         {
             loadQuestion(currentIDCard);
             //Deactivate answer UI, activate the question UI again
-            choice0.enabled = true;
+            bouncerText.enabled = true;
+            /*choice0.enabled = true;
             choice1.enabled = true;
-            choice2.enabled = true;
-
+            choice2.enabled = true;*/
+            Button0.SetActive(true);
+            Button1.SetActive(true);
+            Button2.SetActive(true);
             nextButton.SetActive(false);
         }
         else
@@ -92,14 +97,14 @@ public class TextAssigner : MonoBehaviour
     {
         bouncerAnswer.enabled = true;
         nextButton.SetActive(true);
-
+        Button0.SetActive(false); Button1.SetActive(false); Button2.SetActive(false);
+        bouncerText.enabled = false;
         if (correctChoices.Contains(buttonID))
         {
-            bouncerAnswer.text = bouncerAnswerOnSucces;
-
-            choice0.enabled = false;
+            bouncerAnswer.text = bouncerAnswerOnSucces;            
+            /*choice0.enabled = false;
             choice1.enabled = false;
-            choice2.enabled = false;
+            choice2.enabled = false;*/            
         }
         else
         {
