@@ -20,7 +20,7 @@ public class Steps : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == 7)
+        if(collision.gameObject.layer == 7 || collision.gameObject.layer == 6)
         {
             int i = Random.Range(0, sounds.Count);
             audioSource.PlayOneShot(sounds[i]);

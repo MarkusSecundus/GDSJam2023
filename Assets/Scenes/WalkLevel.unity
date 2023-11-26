@@ -1605,6 +1605,8 @@ MonoBehaviour:
   Camera: {fileID: 706151421}
   IKroot: {fileID: 1784497427}
   multiplier: 0.2
+  footModelL: {fileID: 0}
+  footModelR: {fileID: 0}
 --- !u!4 &871532533
 Transform:
   m_ObjectHideFlags: 0
