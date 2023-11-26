@@ -270,11 +270,12 @@ public class SurnameQClass:IQuestion
         int correctAnswer = Random.Range(0, 3);
         answers[correctAnswer] = card.Surname;
         correctAnswers.Add(correctAnswer);
+        bouncerAOnSuccess = "I do know the " + answers[correctAnswer] + " family who lives nearby, but not well.";
         for (int i = 0; i < 3; i++)
         {
             answers[i] = "Do you know another "+answers[i]+"?";
         }
-        bouncerAOnSuccess = "I do know the " + answers[correctAnswer] + " family who lives nearby, but not well.";
+        
     }
 }
 
