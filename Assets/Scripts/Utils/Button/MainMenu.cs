@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MarkusSecundus.MultiInput;
 using UnityEngine.SceneManagement;
+using System.Diagnostics.Tracing;
 
 public class MainMenu : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class MainMenu : MonoBehaviour
 
     public void ChangeScene(string nameOfScene)
     {
+        IDgetter.InnitCounter();
         SceneManager.LoadScene(nameOfScene);
     }
 
