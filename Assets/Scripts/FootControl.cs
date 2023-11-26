@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class FootControl : MonoBehaviour
 {
+    enum Pressed
+    {
+        NONE,
+        LEFT,
+        RIGHT
+    }
+
     Vector2 mousePosL;
     Vector2 mousePosR;
+    Pressed pressedFlag;
 
     float starty;
     [SerializeField] float maxHeight;
@@ -66,9 +74,33 @@ public class FootControl : MonoBehaviour
                 }
             }
         }
-
+        
         float yangle = Camera.rotation.eulerAngles.y;
 
+        if(!MouseCheck.mouseL.IsAnyButtonPressed && !MouseCheck.mouseR.IsAnyButtonPressed)
+        {
+            pressedFlag = Pressed.NONE;
+            FallRight();
+            FallLeft();
+        }
+
+        if((pressedFlag == Pressed.NONE || pressedFlag == Pressed.LEFT) && MouseCheck.mouseL.IsAnyButtonPressed)
+        {
+            pressedFlag = Pressed.LEFT;
+            MoveLeftFoot(yangle);
+            FallRight();
+        }
+
+        if ((pressedFlag == Pressed.NONE || pressedFlag == Pressed.RIGHT) && MouseCheck.mouseR.IsAnyButtonPressed)
+        {
+            pressedFlag = Pressed.RIGHT;
+            MoveRightFoot(yangle);
+            FallLeft();
+        }
+    }
+
+    private void MoveLeftFoot(float yangle)
+    {
         Vector2 newPosL = MouseCheck.mouseL.Axes;
 
         if (footL.transform.position.y > starty)
@@ -77,8 +109,6 @@ public class FootControl : MonoBehaviour
             footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPosL.x, 0, newPosL.y) * multiplier;
             //mousePosL = newPosL;
         }
-
-        mousePosL = newPosL;
 
         if (MouseCheck.mouseL.IsAnyButtonPressed)
         {
@@ -89,12 +119,21 @@ public class FootControl : MonoBehaviour
         }
         else
         {
-            if (footL.transform.position.y > starty)
-            {
-                footL.transform.position = footL.transform.position - Vector3.up * Time.deltaTime * 3;
-            }
+            FallLeft();
         }
+        mousePosL = newPosL;
+    }
 
+    private void FallLeft()
+    {
+        if (footL.transform.position.y > starty)
+        {
+            footL.transform.position = footL.transform.position - Vector3.up * Time.deltaTime * 3;
+        }
+    }
+
+    private void MoveRightFoot(float yangle)
+    {
         Vector2 newPosR = MouseCheck.mouseR.Axes;
 
 
@@ -117,10 +156,15 @@ public class FootControl : MonoBehaviour
         }
         else
         {
-            if (footR.transform.position.y > starty)
-            {
-                footR.transform.position = footR.transform.position - Vector3.up * Time.deltaTime * 3;
-            }
+            FallRight();
+        }
+    }
+
+    private void FallRight()
+    {
+        if (footR.transform.position.y > starty)
+        {
+            footR.transform.position = footR.transform.position - Vector3.up * Time.deltaTime * 3;
         }
     }
 }

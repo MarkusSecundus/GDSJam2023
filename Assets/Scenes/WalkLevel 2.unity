@@ -1568,7 +1568,7 @@ MonoBehaviour:
   IKtargetR: {fileID: 1784497428}
   Camera: {fileID: 706151421}
   IKroot: {fileID: 1784497427}
-  multiplier: 0.31
+  multiplier: 0.2
 --- !u!4 &871532533
 Transform:
   m_ObjectHideFlags: 0
