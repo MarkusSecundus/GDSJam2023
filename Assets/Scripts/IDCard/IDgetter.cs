@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class IDgetter : MonoBehaviour
 {
     public static int counter = -1;
-    [SerializeField] string level0;
-    [SerializeField] string level1;
-    [SerializeField] string level2;
+    [SerializeField] List<string> levels;
     [SerializeField] string end;
     // Start is called before the first frame update
     void Start()
@@ -51,27 +49,14 @@ public class IDgetter : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        if(counter == 3)
+        if(counter >= levels.Count)
         {
-            counter = 0;
+            InnitCounter();
             SceneManager.LoadScene(end);
         }
 
         yield return new WaitForSeconds(5f);
-        switch (counter)
-        {
-            case 0:
-                SceneManager.LoadScene(level0);
-                break;
-            case 1:
-                SceneManager.LoadScene(level1);
-                break;
-            case 2:
-                SceneManager.LoadScene(level2);
-                break;
-            default:
-                break;
-        }
+        SceneManager.LoadScene(levels[counter]);
         
     }
 }
