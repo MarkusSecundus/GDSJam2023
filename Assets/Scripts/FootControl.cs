@@ -26,6 +26,8 @@ public class FootControl : MonoBehaviour
     [SerializeField] Transform Camera;
     [SerializeField] Transform IKroot;
     [SerializeField] float multiplier;
+    [SerializeField] Renderer footModelL;
+    [SerializeField] Renderer footModelR;
 
     // Start is called before the first frame update
     void Start()
@@ -80,91 +82,57 @@ public class FootControl : MonoBehaviour
         if(!MouseCheck.mouseL.IsAnyButtonPressed && !MouseCheck.mouseR.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.NONE;
-            FallRight();
-            FallLeft();
+            FallFoot(footR);
+            FallFoot(footL);
         }
 
         if((pressedFlag == Pressed.NONE || pressedFlag == Pressed.LEFT) && MouseCheck.mouseL.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.LEFT;
             MoveLeftFoot(yangle);
-            FallRight();
+            FallFoot(footR);
         }
 
         if ((pressedFlag == Pressed.NONE || pressedFlag == Pressed.RIGHT) && MouseCheck.mouseR.IsAnyButtonPressed)
         {
             pressedFlag = Pressed.RIGHT;
             MoveRightFoot(yangle);
-            FallLeft();
+            FallFoot(footL);
         }
     }
 
-    private void MoveLeftFoot(float yangle)
+    private void MoveLeftFoot(float yangle) => MoveFoot(yangle, MouseCheck.mouseL, footL, ref mousePosL);
+    private void MoveRightFoot(float yangle) => MoveFoot(yangle, MouseCheck.mouseR, footR, ref mousePosR);
+
+    private void MoveFoot(float yangle, IMouse mouse, GameObject foot, ref Vector2 mousePos)
     {
-        Vector2 newPosL = MouseCheck.mouseL.Axes;
-
-        if (footL.transform.position.y > starty)
+        Vector2 newPos = mouse.Axes;
+        if (foot.transform.position.y > starty)
         {
-            Vector2 deltaPos = newPosL - mousePosL;
-            footL.transform.position = footL.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPosL.x, 0, newPosL.y) * multiplier;
-            //mousePosL = newPosL;
+            Vector2 deltaPos = newPos - mousePos;
+            foot.transform.position = foot.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPos.x, 0, newPos.y) * multiplier;
+            //mousePos = newPos;
         }
+        mousePos = newPos;
 
-        if (MouseCheck.mouseL.IsAnyButtonPressed)
+        if (mouse.IsAnyButtonPressed)
         {
-            if (footL.transform.position.y < starty + maxHeight)
+            if (foot.transform.position.y < starty + maxHeight)
             {
-                footL.transform.position = footL.transform.position + Vector3.up * Time.deltaTime * 3;
+                foot.transform.position = foot.transform.position + Vector3.up * Time.deltaTime * 3;
             }
         }
         else
         {
-            FallLeft();
-        }
-        mousePosL = newPosL;
-    }
-
-    private void FallLeft()
-    {
-        if (footL.transform.position.y > starty)
-        {
-            footL.transform.position = footL.transform.position - Vector3.up * Time.deltaTime * 3;
+            FallFoot(foot);
         }
     }
 
-    private void MoveRightFoot(float yangle)
+    void FallFoot(GameObject foot)
     {
-        Vector2 newPosR = MouseCheck.mouseR.Axes;
-
-
-        if (footR.transform.position.y > starty)
+        if (foot.transform.position.y > starty)
         {
-            Vector2 deltaPos = newPosR - mousePosR;
-            footR.transform.position = footR.transform.position + Quaternion.AngleAxis(yangle, Vector3.up) * new Vector3(newPosR.x, 0, newPosR.y) * multiplier;
-            //mousePosR = newPosR;
-
-        }
-
-        mousePosR = newPosR;
-
-        if (MouseCheck.mouseR.IsAnyButtonPressed)
-        {
-            if (footR.transform.position.y < starty + maxHeight)
-            {
-                footR.transform.position = footR.transform.position + Vector3.up * Time.deltaTime * 3;
-            }
-        }
-        else
-        {
-            FallRight();
-        }
-    }
-
-    private void FallRight()
-    {
-        if (footR.transform.position.y > starty)
-        {
-            footR.transform.position = footR.transform.position - Vector3.up * Time.deltaTime * 3;
+            foot.transform.position = foot.transform.position - Vector3.up * Time.deltaTime * 3;
         }
     }
 }
