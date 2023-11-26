@@ -1,4 +1,5 @@
 using MarkusSecundus.MultiInput;
+using MarkusSecundus.PhysicsSwordfight.Utils.Graphics;
 using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
 using System.Collections;
 using System.Collections.Generic;
@@ -126,13 +127,17 @@ public class FootControl : MonoBehaviour
     private GameObject _otherFoot(GameObject foot) => foot == footL ? footR : footL;
     private float _getGroundHeight(GameObject foot)
     {
-        if (!Physics.Raycast(foot.transform.position, Vector3.down * 10, out var info, LayerMask.NameToLayer("Wall")))
+        var castPosition = foot.transform.position + Vector3.up;
+        if (!Physics.Raycast(castPosition, Vector3.down * 10, out var info, LayerMask.NameToLayer("Wall")))
         {
             Debug.Log("Raycast hit nothing!");
             return starty;
         }
 
-        return info.point.y;// + 0.5f;
+        Debug.Log($"Collides with {info.collider.name}");
+        DrawHelpers.DrawWireSphere(info.point, 0.6f, (a,b)=>Debug.DrawLine(a,b,Color.blue), circles: 10);
+        Debug.DrawLine(castPosition, info.point, Color.red);
+        return info.point.y;
     } 
 
 
@@ -165,7 +170,7 @@ public class FootControl : MonoBehaviour
 
     void FallFoot(GameObject foot)
     {
-        if (foot.transform.position.y > starty)
+        if (foot.transform.position.y > _getGroundHeight(foot))
         {
             foot.transform.position = foot.transform.position - Vector3.up * Time.deltaTime * 3;
         }
