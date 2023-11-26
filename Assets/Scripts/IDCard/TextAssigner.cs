@@ -63,7 +63,8 @@ public class TextAssigner : MonoBehaviour
             resetQLoader();
             currentIDCard = null;
             IDCard.NullOutID();
-            SceneManager.LoadScene(failScene);          
+            //SceneManager.LoadScene(failScene);          
+            StartCoroutine("ChangeSceneAfterSec");
             return;
         }
 
@@ -91,6 +92,13 @@ public class TextAssigner : MonoBehaviour
             SceneManager.LoadScene(nextScene);
         }
 
+    }
+
+    IEnumerator ChangeSceneAfterSec()
+    {
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(failScene);
     }
 
     public void processButtonPress(int buttonID)
