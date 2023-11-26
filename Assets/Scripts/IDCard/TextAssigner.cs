@@ -26,6 +26,8 @@ public class TextAssigner : MonoBehaviour
     [SerializeField] GameObject Button0, Button1, Button2;
 
     bool fail = false;
+    bool strike = false;
+    bool prevStrike = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,8 @@ public class TextAssigner : MonoBehaviour
         string bouncerTalk;
         List<string> responses;
         nextButton.SetActive(false);
-
+        strike = false;
+        
         IQuestion question = questionLoader.getNextQuestion();
         question.GetCompleteQuestionDetails(id, out bouncerTalk, out responses, out correctChoices, out bouncerAnswerOnSucces);
         bouncerText.text = bouncerTalk;
@@ -52,6 +55,8 @@ public class TextAssigner : MonoBehaviour
     {
         questionLoader.resetUsedQs();
         questionsDone = 0;
+        strike = false;
+        prevStrike = false;
     }
     public void button0Press() { processButtonPress(0); }
     public void button1Press() { processButtonPress(1); }
@@ -65,6 +70,17 @@ public class TextAssigner : MonoBehaviour
             IDCard.NullOutID();
             //SceneManager.LoadScene(failScene);          
             StartCoroutine("ChangeSceneAfterSec");
+            return;
+        }
+
+        if(!prevStrike && strike)
+        {
+            prevStrike = true;
+            bouncerText.enabled = true;
+            Button0.SetActive(true);
+            Button1.SetActive(true);
+            Button2.SetActive(true);
+            nextButton.SetActive(false);
             return;
         }
 
@@ -116,6 +132,13 @@ public class TextAssigner : MonoBehaviour
         }
         else
         {
+            if (!strike)
+            {
+                strike = true;
+                bouncerAnswer.text = "Are you sure? Sure, you are drunk, but this much?";
+                return;
+            }
+
             bouncerAnswer.text = "That doesn't match the ID. Are you lying to me?";
             fail = true;
             //Game over man! Strike/gameover screen on pressing 'next' button.
