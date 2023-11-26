@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WalkLevel 3.unity
     guid: 2390a2a4030057b4392606052bca22d2
   - enabled: 1
+    path: Assets/Scenes/WalkLevel 4.unity
+    guid: a136f395f7abc37489cc29c9e2121439
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 3676a29d803fc8e459cca0a762f6e052
   - enabled: 1
