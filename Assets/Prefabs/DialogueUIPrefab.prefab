@@ -1234,10 +1234,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1855136574878238638}
+  - {fileID: 5451865123969176878}
   - {fileID: 6986866682717523812}
   - {fileID: 5024055820026541327}
   - {fileID: 2076355631315145791}
-  - {fileID: 5451865123969176878}
   - {fileID: 2964315017117835062}
   m_Father: {fileID: 4929803199162695030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1301,6 +1301,7 @@ MonoBehaviour:
   choice1: {fileID: 5112805777866118447}
   choice2: {fileID: 6167329815524311357}
   bouncerAnswer: {fileID: 0}
+  nextScene: 
 --- !u!1 &7686435847612566031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,8 +1336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 18}
-  m_SizeDelta: {x: 800, y: 50}
+  m_AnchoredPosition: {x: 0, y: 33.546}
+  m_SizeDelta: {x: 800, y: 18.908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6503157109718299989
 CanvasRenderer:
